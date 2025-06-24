@@ -118,6 +118,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (href !== "#") {
         e.preventDefault();
+
         const targetElement = document.querySelector(href);
 
         if (targetElement) {
@@ -172,6 +173,30 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   }
+
+  // Back to top button
+  const backToTopButton = document.getElementById("back-to-top");
+
+  // Khi cuộn trang, kiểm tra vị trí cuộn cho back-to-top button
+  window.addEventListener("scroll", function () {
+    // Nếu vị trí cuộn > 300px, hiển thị nút
+    if (window.scrollY > 300) {
+      backToTopButton.classList.add("show");
+    } else {
+      // Ngược lại, ẩn nút
+      backToTopButton.classList.remove("show");
+    }
+  });
+
+  // Xử lý sự kiện click vào nút back to top
+  backToTopButton.addEventListener("click", function (e) {
+    e.preventDefault();
+    // Cuộn mượt về đầu trang
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
 
   // Handle window resize
   let resizeTimer;
@@ -299,28 +324,78 @@ document.addEventListener("DOMContentLoaded", function () {
     // Run on scroll
     window.addEventListener("scroll", animateProgressBars);
   }
+});
 
-  // Back to top button
-  const backToTopButton = document.getElementById("back-to-top");
+// Back to top button functionality
+$(window).scroll(function () {
+  if ($(this).scrollTop() > 300) {
+    $(".back-to-top").fadeIn("slow");
+  } else {
+    $(".back-to-top").fadeOut("slow");
+  }
 
-  // Khi cuộn trang, kiểm tra vị trí cuộn
-  window.addEventListener("scroll", function () {
-    // Nếu vị trí cuộn > 300px, hiển thị nút
-    if (window.scrollY > 300) {
-      backToTopButton.classList.add("show");
-    } else {
-      // Ngược lại, ẩn nút
-      backToTopButton.classList.remove("show");
+  // Add scroll spy functionality - handle menu active state when scrolling
+  const sections = [
+    "#section1",
+    "#section2",
+    "#section3",
+    "#section4",
+    "#section5",
+    "#section6",
+  ];
+  const navItems = {
+    "#section1": $(".header-nav .nav-item:nth-child(1) a"),
+    "#section2": $(".header-nav .nav-item:nth-child(2) a"),
+    "#section3": $(".header-nav .nav-item:nth-child(3) a"),
+    "#section4": $(".header-nav .nav-item:nth-child(4) a"),
+    "#section5": $(".header-nav .nav-item:nth-child(5) a"),
+    "#section6": $(".header-nav .nav-item:nth-child(6) a"),
+  };
+
+  let currentSection = "";
+
+  // Find which section is in view
+  sections.forEach((section) => {
+    const $section = $(section);
+    if ($section.length) {
+      const sectionTop = $section.offset().top - 100;
+      const sectionBottom = sectionTop + $section.height();
+
+      if (
+        $(window).scrollTop() >= sectionTop &&
+        $(window).scrollTop() < sectionBottom
+      ) {
+        currentSection = section;
+      }
     }
   });
 
-  // Xử lý sự kiện click vào nút back to top
-  backToTopButton.addEventListener("click", function (e) {
+  // Remove all active classes first
+  $(".header-nav .nav-item a").removeClass("active-scroll");
+
+  // Add active class only to current section's nav item
+  if (currentSection && navItems[currentSection]) {
+    navItems[currentSection].addClass("active-scroll");
+  }
+});
+
+$(".back-to-top").click(function () {
+  $("html, body").animate({ scrollTop: 0 }, 500);
+  return false;
+});
+
+// Smooth scrolling for navigation links
+$(".header-nav .nav-item a").on("click", function (e) {
+  if (this.hash !== "") {
     e.preventDefault();
-    // Cuộn mượt về đầu trang
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  });
+
+    const hash = this.hash;
+
+    $("html, body").animate(
+      {
+        scrollTop: $(hash).offset().top - 70,
+      },
+      800
+    );
+  }
 });
