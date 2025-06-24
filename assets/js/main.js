@@ -2,6 +2,17 @@ document.addEventListener("DOMContentLoaded", function () {
   // Initialize WOW.js
   new WOW().init();
 
+  // Kiểm tra nếu đang ở trang Price.html thì active menu "Báo giá"
+  const currentPage = window.location.pathname;
+  if (currentPage.includes("Price.html")) {
+    const priceMenuItem = document.querySelector(
+      '.header-nav .nav-item a[href="Price.html"]'
+    );
+    if (priceMenuItem) {
+      priceMenuItem.classList.add("active-scroll");
+    }
+  }
+
   // Fix for lazyload images to prevent duplicate display
   document.querySelectorAll("img.lazyload").forEach((img) => {
     // Remove style attribute if present

@@ -287,6 +287,7 @@ body {
 .header-nav .nav-item a.active-scroll {
   color: var(--primary-color);
   position: relative;
+  font-weight: bold;
 }
 
 .header-nav .nav-item a.active-scroll::after {
