@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const header = document.querySelector(".header-fixed");
   if (header) {
     window.addEventListener("scroll", function () {
-      if (window.scrollY > 100) {
+      if (window.scrollY > 50) {
         header.classList.add("is-sticky");
       } else {
         header.classList.remove("is-sticky");

@@ -15,6 +15,11 @@ body {
   padding: 0;
 }
 
+/* Main wrapper */
+.main-wrapper {
+  position: relative;
+}
+
 /* Menu scrollbar styling */
 .item_big::-webkit-scrollbar {
   width: 4px;
@@ -32,7 +37,7 @@ body {
 /* Slider Styles */
 .section_slider {
   position: relative;
-  margin-top: 80px; /* Space for fixed header */
+  margin-top: 0; /* Remove margin since header is absolute */
 }
 
 .home-slider {
@@ -51,7 +56,12 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.4); /* Overlay tối */
+  background: linear-gradient(
+    to bottom,
+    rgba(45, 62, 80, 0.8) 0%,
+    rgba(45, 62, 80, 0.4) 30%,
+    rgba(0, 0, 0, 0.3) 100%
+  );
   z-index: 1;
 }
 
@@ -123,15 +133,16 @@ body {
 
 /* Header Styles */
 .header {
-  background-color: var(--dark-bg-color);
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   z-index: 999;
+  background: transparent;
 }
 
 .header-fixed {
-  position: fixed;
-  top: 0;
-  left: 0;
+  position: absolute;
   width: 100%;
   z-index: 1000;
 }
@@ -141,6 +152,11 @@ body {
 }
 
 .is-sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(45, 62, 80, 0.95);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   animation: slideDown 0.5s ease-out;
 }
