@@ -269,4 +269,28 @@ document.addEventListener("DOMContentLoaded", function () {
     // Run on scroll
     window.addEventListener("scroll", animateProgressBars);
   }
+
+  // Back to top button
+  const backToTopButton = document.getElementById("back-to-top");
+
+  // Khi cuộn trang, kiểm tra vị trí cuộn
+  window.addEventListener("scroll", function () {
+    // Nếu vị trí cuộn > 300px, hiển thị nút
+    if (window.scrollY > 300) {
+      backToTopButton.classList.add("show");
+    } else {
+      // Ngược lại, ẩn nút
+      backToTopButton.classList.remove("show");
+    }
+  });
+
+  // Xử lý sự kiện click vào nút back to top
+  backToTopButton.addEventListener("click", function (e) {
+    e.preventDefault();
+    // Cuộn mượt về đầu trang
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
 });
