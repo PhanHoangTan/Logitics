@@ -456,6 +456,11 @@ body {
 .about-top img {
   max-width: 60px;
   height: auto;
+  transition: transform 0.8s ease;
+}
+
+.content-about:hover .about-top img {
+  transform: rotate(360deg);
 }
 
 .title-about {
