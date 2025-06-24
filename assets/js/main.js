@@ -127,4 +127,74 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }, 250);
   });
+
+  // Sticky header
+  window.addEventListener("scroll", function () {
+    const header = document.querySelector(".header");
+    if (window.scrollY > 100) {
+      header.classList.add("is-sticky");
+    } else {
+      header.classList.remove("is-sticky");
+    }
+  });
+
+  // Counter animation for statistics
+  const counters = document.querySelectorAll(".counter");
+  const speed = 200; // The lower the slower
+
+  const startCounters = () => {
+    counters.forEach((counter) => {
+      const updateCount = () => {
+        const target =
+          +counter.getAttribute("data-target") || +counter.innerText;
+        const count = +counter.innerText.replace(/,/g, "") || 0;
+        const increment = target / speed;
+
+        if (count < target) {
+          counter.innerText = Math.ceil(count + increment);
+          setTimeout(updateCount, 1);
+        } else {
+          counter.innerText = target.toLocaleString();
+        }
+      };
+
+      // Set data-target attribute if not present
+      if (!counter.getAttribute("data-target")) {
+        counter.setAttribute("data-target", counter.innerText);
+      }
+
+      counter.innerText = "0";
+      updateCount();
+    });
+  };
+
+  // Start counters when they come into view
+  const statsSection = document.querySelector(".section_stats");
+  if (statsSection) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            startCounters();
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    observer.observe(statsSection);
+  }
+
+  // Initialize lazy loading for images
+  document.querySelectorAll(".lazyload").forEach(function (el) {
+    if (el.dataset.src) {
+      if (el.tagName.toLowerCase() === "img") {
+        el.src = el.dataset.src;
+      } else {
+        el.style.backgroundImage = "url(" + el.dataset.src + ")";
+      }
+      el.dataset.wasProcessed = true;
+    }
+  });
 });
