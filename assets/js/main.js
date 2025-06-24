@@ -197,4 +197,40 @@ document.addEventListener("DOMContentLoaded", function () {
       el.dataset.wasProcessed = true;
     }
   });
+
+  // Animate progress bars when they come into view
+  const progressBars = document.querySelectorAll(".progress-bar");
+  if (progressBars.length > 0) {
+    const animateProgressBars = () => {
+      progressBars.forEach((bar) => {
+        const rect = bar.getBoundingClientRect();
+        const isInViewport =
+          rect.top >= 0 &&
+          rect.left >= 0 &&
+          rect.bottom <=
+            (window.innerHeight || document.documentElement.clientHeight) &&
+          rect.right <=
+            (window.innerWidth || document.documentElement.clientWidth);
+
+        if (isInViewport && !bar.classList.contains("animated")) {
+          const width =
+            (bar.getAttribute("aria-valuenow") /
+              bar.getAttribute("aria-valuemax")) *
+              100 +
+            "%";
+          bar.style.width = "0%";
+          setTimeout(() => {
+            bar.style.width = width;
+            bar.classList.add("animated");
+          }, 100);
+        }
+      });
+    };
+
+    // Run once on page load
+    animateProgressBars();
+
+    // Run on scroll
+    window.addEventListener("scroll", animateProgressBars);
+  }
 });
