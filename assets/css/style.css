@@ -5,6 +5,7 @@
   --text-color: #333;
   --white-color: #fff;
   --dark-bg-color: #2d3e50;
+  --modern-gradient: linear-gradient(135deg, #2193b0, #6dd5ed);
 }
 
 body {
@@ -540,7 +541,8 @@ body {
 }
 
 .service-item.bg-primary {
-  background-color: #0095da;
+  background: var(--modern-gradient);
+  position: relative;
 }
 
 .service-image-container {
@@ -569,11 +571,11 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) rotate(45deg);
   background-color: #fff;
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  border-radius: 4px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -582,24 +584,28 @@ body {
 }
 
 .service-icon img {
-  max-width: 50px;
+  max-width: 40px;
   transition: transform 0.8s ease;
   width: auto;
   height: auto;
+  transform: rotate(-45deg);
 }
 
 .service-item:hover .service-icon img {
-  transform: rotate(360deg);
+  transform: rotate(315deg);
 }
 
 .service-content {
-  padding: 30px;
+  padding: 30px 80px 30px 30px;
+}
+
+.bg-primary .service-content {
+  padding: 30px 30px 30px 80px;
 }
 
 .title-service {
   font-size: 24px;
   font-weight: 700;
-  text-align: center;
   margin-bottom: 20px;
   color: var(--primary-color);
   position: relative;
@@ -608,6 +614,7 @@ body {
 
 .bg-primary .title-service {
   color: #fff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .title-service:after {
@@ -626,13 +633,12 @@ body {
 
 .service-description {
   font-size: 16px;
-  text-align: center;
   line-height: 1.6;
   color: var(--text-color);
 }
 
 .bg-primary .service-description {
-  color: #fff;
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .service-description p {
@@ -651,6 +657,14 @@ body {
 
   .service-icon img {
     max-width: 35px;
+  }
+
+  .service-content {
+    padding: 30px 60px 30px 30px;
+  }
+
+  .bg-primary .service-content {
+    padding: 30px 30px 30px 60px;
   }
 
   .title-service {
@@ -686,8 +700,163 @@ body {
     font-size: 14px;
   }
 
-  .service-content {
-    padding: 15px 0;
+  .service-content,
+  .bg-primary .service-content {
+    padding: 15px 30px;
+    margin-top: 15px;
+  }
+}
+
+/* Transport Section */
+.section_transport {
+  padding: 50px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.transport-item {
+  padding: 60px 0;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.transport-item.bg-primary {
+  background: var(--modern-gradient);
+  position: relative;
+}
+
+.transport-image {
+  padding: 15px;
+}
+
+.transport-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.transport-content {
+  padding: 30px;
+  position: relative;
+}
+
+.transport-icon {
+  position: relative;
+  background-color: #fff;
+  width: 70px;
+  height: 70px;
+  transform: rotate(45deg);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  margin-bottom: 30px;
+}
+
+.transport-icon img {
+  max-width: 40px;
+  width: auto;
+  height: auto;
+  transform: rotate(-45deg);
+}
+
+.title-transport {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: var(--primary-color);
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.bg-primary .title-transport {
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.title-transport:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background-color: var(--primary-color);
+}
+
+.bg-primary .title-transport:after {
+  background-color: #fff;
+}
+
+.transport-description {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-color);
+}
+
+.bg-primary .transport-description {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.transport-description p {
+  margin-bottom: 15px;
+}
+
+@media (max-width: 991px) {
+  .section_transport {
+    padding: 40px 0;
+  }
+
+  .transport-item {
+    padding: 40px 0;
+  }
+
+  .transport-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .transport-icon img {
+    max-width: 35px;
+  }
+
+  .title-transport {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .section_transport {
+    padding: 30px 0;
+  }
+
+  .transport-item {
+    padding: 30px 0;
+  }
+
+  .transport-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .transport-icon img {
+    max-width: 30px;
+  }
+
+  .title-transport {
+    font-size: 18px;
+  }
+
+  .transport-description {
+    font-size: 14px;
+  }
+
+  .transport-content {
+    padding: 15px;
     margin-top: 15px;
   }
 }
