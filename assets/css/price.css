@@ -86,6 +86,11 @@
   color: var(--primary-color);
 }
 
+.breadcrumb li strong {
+  color: #007bff;
+  font-weight: 700;
+}
+
 .mr_lr {
   color: rgba(255, 255, 255, 0.8);
 }
