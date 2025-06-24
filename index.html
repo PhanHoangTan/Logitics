@@ -435,7 +435,7 @@
           <div class="container">
             <div class="title_module_main clearfix">
               <h2 class="h2">
-                <span>Số liệu thống kê</span>
+                <span>SỐ LIỆU THỐNG KÊ</span>
               </h2>
             </div>
             <div class="row">
@@ -492,7 +492,7 @@
               <div class="col-lg-6 col-md-12">
                 <div class="content-app clearfix">
                   <div class="title-app clearfix">
-                    Tải App Logitics
+                    TẢI APP LOGITICS
                   </div>
                   
                   <div class="summary-app">
@@ -605,11 +605,40 @@
           speed: 1000,
         });
         
-        // Initialize lazy loading for background images
-        document.querySelectorAll('.lazyload').forEach(function(el) {
+        // Initialize lazy loading for background images only
+        document.querySelectorAll('section.lazyload').forEach(function(el) {
           if (el.dataset.src) {
             el.style.backgroundImage = 'url(' + el.dataset.src + ')';
             el.dataset.wasProcessed = true;
+          }
+        });
+        
+        // Initialize lazy loading for images
+        document.querySelectorAll('img.lazyload').forEach(function(el) {
+          // Remove any existing background image styling
+          if (el.hasAttribute('style')) {
+            el.removeAttribute('style');
+          }
+          
+          // Set up proper lazy loading
+          if (el.dataset.src) {
+            // Use a tiny placeholder image
+            if (el.src === el.dataset.src) {
+              el.src = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC';
+            }
+            
+            // Create an observer for lazy loading
+            const observer = new IntersectionObserver((entries, observer) => {
+              entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                  const img = entry.target;
+                  img.src = img.dataset.src;
+                  observer.unobserve(img);
+                }
+              });
+            });
+            
+            observer.observe(el);
           }
         });
       });

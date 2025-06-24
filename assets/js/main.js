@@ -2,6 +2,42 @@ document.addEventListener("DOMContentLoaded", function () {
   // Initialize WOW.js
   new WOW().init();
 
+  // Fix for lazyload images to prevent duplicate display
+  document.querySelectorAll("img.lazyload").forEach((img) => {
+    // Remove style attribute if present
+    if (img.hasAttribute("style")) {
+      img.removeAttribute("style");
+    }
+
+    // Ensure proper lazyloading
+    if (
+      img.hasAttribute("data-src") &&
+      img.hasAttribute("src") &&
+      img.getAttribute("src") === img.getAttribute("data-src")
+    ) {
+      // If src and data-src are the same, use only data-src
+      img.setAttribute(
+        "src",
+        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
+      );
+    }
+  });
+
+  // Add hover effects to buttons and interactive elements
+  const interactiveElements = document.querySelectorAll(
+    ".button_mobile, .nav-item a, .footer-links a, .social-links a"
+  );
+  interactiveElements.forEach((element) => {
+    element.addEventListener("mouseenter", function () {
+      this.style.transform = "translateY(-5px)";
+      this.style.transition = "transform 0.3s ease";
+    });
+
+    element.addEventListener("mouseleave", function () {
+      this.style.transform = "translateY(0)";
+    });
+  });
+
   // Mobile menu toggle
   const menuBar = document.querySelector(".menu-bar");
   const mobileMenu = document.querySelector(".item_big");
@@ -65,7 +101,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const header = document.querySelector(".header-fixed");
   if (header) {
     window.addEventListener("scroll", function () {
-      if (window.scrollY > 50) {
+      if (window.scrollY > 100) {
         header.classList.add("is-sticky");
       } else {
         header.classList.remove("is-sticky");
