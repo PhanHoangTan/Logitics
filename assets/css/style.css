@@ -435,40 +435,41 @@ body {
 }
 
 .content-about {
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  padding: 30px;
-  height: 100%;
+  background-color: transparent;
+  padding: 30px 15px;
+  border-radius: 5px;
+  text-align: center;
   transition: all 0.3s ease;
+  height: 100%;
+  box-shadow: none;
 }
 
 .content-about:hover {
-  transform: translateY(-10px);
+  box-shadow: none;
+  transform: translateY(-5px);
 }
 
 .about-top {
-  text-align: center;
   margin-bottom: 20px;
 }
 
 .about-top img {
-  height: 80px;
-  width: auto;
+  max-width: 60px;
+  height: auto;
 }
 
 .title-about {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 700;
   margin-bottom: 15px;
-  text-align: center;
-  color: #2e9df7;
+  color: var(--text-color);
+  text-transform: uppercase;
 }
 
 .about-sumary {
-  text-align: justify;
+  font-size: 14px;
   line-height: 1.6;
-  color: #666;
+  color: var(--text-color);
 }
 
 /* Animation classes */
