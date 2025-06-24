@@ -143,6 +143,36 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+  // Xử lý riêng cho nút "Về chúng tôi" trên header
+  const aboutUsLink = document.querySelector('a[href="#ve-chung-toi"]');
+  if (aboutUsLink) {
+    aboutUsLink.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      // Tìm section 2
+      const section2 = document.querySelector(".awe-section-2");
+      if (section2) {
+        // Close mobile menu if open
+        if (menuBar && menuBar.classList.contains("active")) {
+          menuBar.classList.remove("active");
+          if (mobileMenu) {
+            mobileMenu.classList.remove("active");
+            if (overlay) {
+              overlay.classList.remove("active");
+            }
+            body.style.overflow = "";
+          }
+        }
+
+        // Scroll đến section 2
+        window.scrollTo({
+          top: section2.offsetTop - 80,
+          behavior: "smooth",
+        });
+      }
+    });
+  }
+
   // Handle window resize
   let resizeTimer;
   window.addEventListener("resize", function () {
