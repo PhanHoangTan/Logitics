@@ -128,6 +128,65 @@
           </div>
         </section>
       </section>
+      
+      <section class="awe-section-2">	
+        <section id="ve-chung-toi" class="lazyload section_about" data-src="//bizweb.dktcdn.net/100/374/039/themes/894812/assets/map.png?1676967946202">
+          <div class="container">
+            <div class="title_module_main">
+              <h2 class="h2">
+                <span>Về chúng tôi</span>
+              </h2>
+            </div>
+            <div class="row">
+              <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12 col-about">
+                <div class="content-about wow fadeInUp clearfix" data-wow-delay="0.51s">
+                  <div class="about-top clearfix">
+                    <img class="lazyload" src="//bizweb.dktcdn.net/100/374/039/themes/894812/assets/icon_1.png?1676967946202" alt="logo">
+                  </div>
+                  <div class="about-bottom clearfix">
+                    <h3 class="title-about">
+                      Giới thiệu chung
+                    </h3>
+                    <div class="about-sumary clearfix">
+                      Chúng tôi thực hiện dịch vụ vận chuyển hàng hóa trên toàn quốc bằng đường bộ, đường hàng không, đường biển với mọi tuyến đường theo nhu cầu của khách hàng. Ngoài ra, chúng tôi còn có nhiều dịch vụ vận chuyển khác để phục vụ khách hàng.
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12 col-about">
+                <div class="content-about wow fadeInUp clearfix" data-wow-delay="0.52s">
+                  <div class="about-top clearfix">
+                    <img class="lazyload" src="//bizweb.dktcdn.net/100/374/039/themes/894812/assets/icon_2.png?1676967946202" alt="logo">
+                  </div>
+                  <div class="about-bottom clearfix">
+                    <h3 class="title-about">
+                      Sứ mệnh 
+                    </h3>
+                    <div class="about-sumary clearfix">
+                      Chúng tôi mong muốn không chỉ mang đến cho khách hàng một dịch vụ chất lượng theo tiêu chuẩn quốc tế với sự trải nghiệm thân thiện và nhiệt tình mà còn cùng khách hàng của mình xây dựng một cuộc sống tốt đẹp hơn cho người Việt.
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12 col-about">
+                <div class="content-about wow fadeInUp clearfix" data-wow-delay="0.53s">
+                  <div class="about-top clearfix">
+                    <img class="lazyload" src="//bizweb.dktcdn.net/100/374/039/themes/894812/assets/icon_3.png?1676967946202" alt="logo">
+                  </div>
+                  <div class="about-bottom clearfix">
+                    <h3 class="title-about">
+                      Tầm nhìn
+                    </h3>
+                    <div class="about-sumary clearfix">
+                      Nằm trong top 3 về quy mô và mạng lưới chuyển phát tại Việt Nam, trở thành công ty số 1 về chất lượng dịch vụ và chỉ số niềm tin cho từng đơn hàng. Là nơi làm việc hấp dẫn, cùng đóng góp công sức - cùng chia sẻ thành công.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
     </main>
     <footer></footer>
 
@@ -135,6 +194,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <!-- WOW JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
     <!-- Custom JS -->
     <script src="./assets/js/main.js"></script>
 
@@ -149,6 +210,14 @@
           loop: true,
           effect: "fade",
           speed: 1000,
+        });
+        
+        // Initialize lazy loading for background images
+        document.querySelectorAll('.lazyload').forEach(function(el) {
+          if (el.dataset.src) {
+            el.style.backgroundImage = 'url(' + el.dataset.src + ')';
+            el.dataset.wasProcessed = true;
+          }
         });
       });
     </script>

@@ -398,3 +398,124 @@ body {
     font-size: 12px;
   }
 }
+
+/* Section About */
+.section_about {
+  padding: 60px 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.title_module_main {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.title_module_main h2 {
+  font-size: 32px;
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 15px;
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+
+.title_module_main h2:after {
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 3px;
+  background: #2e9df7;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.content-about {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  height: 100%;
+  transition: all 0.3s ease;
+}
+
+.content-about:hover {
+  transform: translateY(-10px);
+}
+
+.about-top {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.about-top img {
+  height: 80px;
+  width: auto;
+}
+
+.title-about {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-align: center;
+  color: #2e9df7;
+}
+
+.about-sumary {
+  text-align: justify;
+  line-height: 1.6;
+  color: #666;
+}
+
+/* Animation classes */
+.wow {
+  visibility: hidden;
+}
+
+.fadeInUp {
+  animation-name: fadeInUp;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 40px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .section_about {
+    padding: 40px 0;
+  }
+
+  .title_module_main h2 {
+    font-size: 28px;
+  }
+
+  .col-about {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .title_module_main h2 {
+    font-size: 24px;
+  }
+
+  .content-about {
+    padding: 20px;
+  }
+
+  .title-about {
+    font-size: 18px;
+  }
+}

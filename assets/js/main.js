@@ -1,4 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
+  // Initialize WOW.js
+  new WOW().init();
+
   // Mobile menu toggle
   const menuBar = document.querySelector(".menu-bar");
   const mobileMenu = document.querySelector(".item_big");
