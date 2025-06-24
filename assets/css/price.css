@@ -1,0 +1,171 @@
+/* Breadcrumb styles */
+.breadcrumb_background {
+  background-image: url("//bizweb.dktcdn.net/100/374/039/themes/894812/assets/breadcrumb_page.jpg?1659409500661");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  min-height: 464px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.breadcrumb_background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.title_full {
+  padding-top: 40px;
+  padding-bottom: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.title_page {
+  color: white;
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+
+.a-center {
+  text-align: center;
+}
+
+.a-left {
+  text-align: left;
+}
+
+.bread-crumb {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  border-top: none;
+}
+
+.crumb-border {
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: var(--primary-color);
+  position: absolute;
+  top: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.breadcrumb {
+  background: transparent;
+  padding: 10px 0;
+  margin-bottom: 0;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+.breadcrumb li {
+  display: inline-block;
+  color: white;
+  font-size: 14px;
+}
+
+.breadcrumb li a {
+  color: white;
+  text-decoration: none;
+}
+
+.breadcrumb li a:hover {
+  color: var(--primary-color);
+}
+
+.mr_lr {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Quote page styles */
+.page_quote {
+  padding-bottom: 50px;
+}
+
+.padding-top-30 {
+  padding-top: 30px;
+}
+
+.margin-bottom-40 {
+  margin-bottom: 40px;
+}
+
+.page-title {
+  margin-bottom: 20px;
+}
+
+.title-head {
+  font-size: 24px;
+  margin: 0 0 20px;
+  font-weight: 700;
+  color: #333;
+}
+
+.title-head a {
+  color: #333;
+  text-decoration: none;
+}
+
+.content-page h2 {
+  font-size: 20px;
+  margin: 25px 0 15px;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.content-page p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.content-page table {
+  width: 100%;
+  margin-bottom: 20px;
+  border-collapse: collapse;
+}
+
+.content-page table tr.first {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.content-page table td {
+  padding: 12px;
+  border: 1px solid #ddd;
+}
+
+@media (max-width: 767px) {
+  .breadcrumb_background {
+    min-height: 200px;
+  }
+
+  .title_page {
+    font-size: 20px;
+  }
+
+  .title-head {
+    font-size: 20px;
+  }
+
+  .content-page h2 {
+    font-size: 18px;
+  }
+
+  .content-page table td {
+    padding: 8px;
+    font-size: 13px;
+  }
+}

@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Báo giá - Logistics</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet" />
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <!-- Price CSS -->
+    <link rel="stylesheet" href="./assets/css/price.css" />
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  </head>
+  <body>
+    <div id="menu-overlay" class=""></div>
+    <div class="menu-overlay"></div>
+    <div class="main-wrapper">
+      <header class="header header-fixed sticky">
+        <div class="mid-header">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-3 col-12 header_top">
+                <div class="logo_center">
+                  <div class="logo">
+                    <a href="/" class="logo-wrapper">
+                      <img
+                        src="//bizweb.dktcdn.net/100/374/039/themes/894812/assets/logo.png?1676967946202"
+                        alt="Logistics Logo" />
+                    </a>
+                  </div>
+                </div>
+                <div class="menu-bar-mobile menu-bar-h nav-mobile-button">
+                  <div class="menu-bar">
+                    <svg
+                      class="category"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 448 512">
+                      <path
+                        d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"></path>
+                    </svg>
+                    <svg
+                      class="closes"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 352 512">
+                      <path
+                        d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-9 col-12 header_bottom">
+                <div class="header_menu clearfix">
+                  <div class="wrap_main menu_mobile">
+                    <nav class="header-nav">
+                      <ul class="item_big heavnal">
+                        <li class="nav-item">
+                          <a
+                            class="a-img"
+                            href="#ve-chung-toi"
+                            title="Về chúng tôi">
+                            <span>Về chúng tôi</span>
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="a-img" href="#dich-vu" title="Dịch vụ">
+                            <span>Dịch vụ</span>
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a
+                            class="a-img"
+                            href="#van-chuyen"
+                            title="Vận chuyển">
+                            <span>Vận chuyển</span>
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="a-img" href="#thong-ke" title="Thống kê">
+                            <span>Thống kê</span>
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="a-img" href="/tin-tuc" title="Tin tức">
+                            <span>Tin tức</span>
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="a-img" href="#lien-he" title="Liên hệ">
+                            <span>Liên hệ</span>
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="a-img" href="Price.html" title="Báo giá">
+                            <span>Báo giá</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </nav>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main>
+        <div class="breadcrumb_background bread-2">
+          <div class="title_full">
+            <div class="container a-center">
+              <h1 class="title_page">Bảng giá dịch vụ chuyển xe tải</h1>
+            </div>
+          </div>
+          <section class="bread-crumb">
+            <div class="container">
+              <div class="row">
+                <div class="col-12">
+                  <ul class="breadcrumb">
+                    <li class="home">
+                      <a href="index.html">Trang chủ</a>
+                      <span class="mr_lr">&nbsp;/&nbsp;</span>
+                    </li>
+                    <li><strong>Bảng giá dịch vụ chuyển xe tải</strong></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <section class="page page_quote">
+          <div class="container">
+            <div class="wrap_background_aside padding-top-30 margin-bottom-40">
+              <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                  <div class="page-main">
+                    <div class="page-title category-title">
+                      <h1 class="title-head">
+                        <a href="#">Bảng giá dịch vụ chuyển xe tải</a>
+                      </h1>
+                    </div>
+                    <div class="content-page rte">
+                      <h2>
+                        1. Quy chuẩn hàng hóa dịch vụ xe tải T1(≤0,5 Tấn) -
+                        T16(Container 40 feet)
+                      </h2>
+                      <p>
+                        Để đảm bảo an toàn và thuận tiện cho việc vận chuyển
+                        hàng hóa bằng xe tải, Logistics đưa ra quy chuẩn hàng
+                        hóa vận chuyển như sau:
+                      </p>
+                      <table
+                        align="left"
+                        border="3"
+                        cellpadding="20"
+                        cellspacing="0"
+                        style="width: 100%">
+                        <tbody>
+                          <tr class="first">
+                            <td style="text-align: center">Kiện hàng</td>
+                            <td style="text-align: center">
+                              Trọng lượng hàng chở
+                            </td>
+                            <td style="text-align: center">
+                              <p>Kích thước</p>
+                              <p>dài(m) x rộng(m) x cao(m)</p>
+                            </td>
+                            <td style="text-align: center">
+                              Loại xe áp dụng(kg)
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="text-align: center">T1</td>
+                            <td style="text-align: center">≤ 0,5 Tấn</td>
+                            <td style="text-align: center">
+                              Từ 2,05 x 1,31 x 1,10 đến 2,60 x 1,50 x 1,41
+                            </td>
+                            <td style="text-align: center">500-799</td>
+                          </tr>
+                          <tr>
+                            <td style="text-align: center">T2</td>
+                            <td style="text-align: center">≤ 1 Tấn</td>
+                            <td style="text-align: center">
+                              Từ 2,60 x 1,50 x 1,41 đến 3,00 x 1,60 x 1,50
+                            </td>
+                            <td style="text-align: center">800-1500</td>
+                          </tr>
+                          <tr>
+                            <td style="text-align: center">T3</td>
+                            <td style="text-align: center">≤ 1,5 Tấn</td>
+                            <td style="text-align: center">
+                              Từ 3,00 x 1,60 x 1,50 đến 4,20 x 1,90 x 1,80
+                            </td>
+                            <td style="text-align: center">1500-2500</td>
+                          </tr>
+                          <tr>
+                            <td style="text-align: center">T4</td>
+                            <td style="text-align: center">≤ 2,5 Tấn</td>
+                            <td style="text-align: center">
+                              Từ 4,20 x 1,90 x 1,80 đến 5,00 x 2,00 x 2,00
+                            </td>
+                            <td style="text-align: center">2500-3500</td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+                      <h2>2. Xuất hóa đơn giá trị gia tăng</h2>
+                      <p>
+                        Logistics đã được Tổng cục thuế chấp nhận xuất hóa đơn
+                        điện tử cho khách hàng (có thể tham khảo tại trang tra
+                        cứu của Tổng cục thuế
+                        (http:/tracuuhoadon.gdt.gov.vn/tbphc.html). Hóa đơn điện
+                        tử sẽ được gửi qua email cho khách hàng in và lưu trữ
+                        làm chứng từ kế toán.
+                      </p>
+                      <p>
+                        Logistics xuất Hóa đơn dịch vụ cho tổng phí vận chuyển
+                        bao gồm 2 hóa đơn: Hóa đơn GTGT 10% vận chuyển tính cho
+                        phần sử dụng công nghệ và Hóa đơn trực tiếp tính cho
+                        phần sử dụng dịch vụ vận chuyển.
+                      </p>
+                      <p>
+                        Khách hàng muốn lấy hóa đơn cần lựa chọn "Lấy hóa đơn
+                        vận tải" trên App - Logistics Công nghệ Vận chuyển và
+                        web đặt hàng và điền đầy đủ thông tin xuất hóa đơn ở mục
+                        "Tài khoản" trên web đặt đươn hàng hoặc liên hệ với
+                        Logistics: 1900 6750 để được hỗ trợ.
+                      </p>
+
+                      <h2>3. Thanh toán</h2>
+                      <p>
+                        Đối với khách lẻ chưa ký hợp đồng: Thanh toán toàn bộ
+                        phí vận chuyện trực tiếp cho lái xe sau ngay sau khi
+                        hoàn thành đơn hàng hoặc chuyển khoản toàn bộ phí vận
+                        chuyển cho Logistics ngay khi đặt đơn hàng.
+                      </p>
+                      <p>
+                        Đối với khách hàng đã ký hợp đồng: Thanh toán phí vận
+                        chuyện được chia làm 2 đợt trong một tháng sau khi Quý
+                        Công ty nhận được hóa đơn tài chính hợp pháp và bảng
+                        quyết toán chi phí vận chuyển Công ty Logistics.
+                      </p>
+
+                      <h2>4. Thời gian giao nhận hàng hóa</h2>
+                      <p>
+                        Đối với dịch vụ vận tải dòng xe tải nhỏ Logistics phục
+                        vụ theo yêu cầu khách hàng và đảm bảo thời gian nhận đơn
+                        hàng trên hệ thống trong 30 phút kể từ khi đơn hàng được
+                        đặt trên hệ thống và vận chuyển ngay. Sau thời gian trên
+                        đơn hàng chưa được nhận trên hệ thống khách hàng liên hệ
+                        với Logistics hotline: 1900 6750 để được hỗ trợ vận
+                        chuyển đơn hàng. Thời gian đảm bảo giao hàng từ 8h00 đến
+                        22h00 tất cả các ngày trong tuần bao gồm cả thứ 7 và chủ
+                        nhật. Đơn hàng giao buổi tối phải được đặt trên hệ thống
+                        trước 18h00 cùng ngày.
+                      </p>
+                      <p>
+                        Đối với dịch vụ vận tải dòng xe tải trung, lớn, xe
+                        container Logistics phục vụ theo yêu cầu của khách hàng.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="copyright">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                <div class="wsp">
+                  <span>© Bản quyền thuộc về <b>Awesome Team</b></span>
+                  <span>|</span>
+                  <span>Cung cấp bởi</span>
+                  <a href="https://www.sapo.vn" rel="nofollow" target="_blank"
+                    >Sapo</a
+                  >
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                <ul class="follow_option">
+                  <li>
+                    <a href="#" title="Facebook"
+                      ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 320 512">
+                        <path
+                          d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path></svg
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="#" title="Twitter"
+                      ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512">
+                        <path
+                          d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="#" title="Google"
+                      ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 488 512">
+                        <path
+                          d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"></path></svg
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="#" title="Instagram"
+                      ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 448 512">
+                        <path
+                          d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <a href="#" id="back-to-top" class="backtop" title="Lên đầu trang">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <path
+              d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z"></path>
+          </svg>
+        </a>
+      </footer>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- WOW JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <!-- Custom JS -->
+    <script src="./assets/js/main.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Initialize WOW.js for animations
+        new WOW().init();
+
+        // Form submission
+        const priceRequestForm = document.getElementById("price-request-form");
+        if (priceRequestForm) {
+          priceRequestForm.addEventListener("submit", function (e) {
+            e.preventDefault();
+            alert(
+              "Cảm ơn bạn đã gửi yêu cầu! Chúng tôi sẽ liên hệ với bạn trong thời gian sớm nhất."
+            );
+            priceRequestForm.reset();
+          });
+        }
+
+        // Smooth scroll for links
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+          anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+
+            const targetId = this.getAttribute("href");
+            if (targetId === "#") return;
+
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+              window.scrollTo({
+                top: targetElement.offsetTop - 80,
+                behavior: "smooth",
+              });
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
