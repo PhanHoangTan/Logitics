@@ -301,14 +301,20 @@ body {
   transition: width 0.3s ease;
 }
 
-/* Disable regular active class completely */
-.header-nav .nav-item a.active {
-  color: inherit;
+/* Style for active menu items */
+.header-nav .nav-item.active a {
+  color: var(--primary-color);
   position: relative;
 }
 
-.header-nav .nav-item a.active::after {
-  display: none;
+.header-nav .nav-item.active a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--primary-color);
 }
 
 /* Hover effect for menu items */
