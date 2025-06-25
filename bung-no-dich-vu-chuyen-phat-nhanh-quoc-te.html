@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bùng nổ dịch vụ chuyển phát nhanh quốc tế - Logistics</title>
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAABILAAASCwAAAAAAAAAAAAAAAAAAAAAAAAAAAAC8sKr/mYBw/5mAcP+ZgHD/mYBw/5mAcP+ZgHD/mYBw/5mAcP+ZgHD/mYBw/7ywqv8AAAAAAAAAAAAAAAAAAAAAq5qR/9PCvP/p4N3/6eDd/+ng3f/p4N3/6eDd/+ng3f/p4N3/6eDd/9PCvP+rmpH/AAAAAAAAAAAAAAAAAAAAAKuakf/TwrzAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA00MK8/6uakf8AAAAAAAAAAAAAAAAAAAAAq5qR/9PCvP/p4N3/6eDd/+ng3f/p4N3/6eDd/+ng3f/p4N3/6eDd/9PCvP+rmpH/AAAAAAAAAAAAAAAAAAAAAKuakf/TwrzAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA00MK8/6uakf8AAAAAAAAAAAAAAAAAAAAAq5qR/9PCvP/p4N3/6eDd/+ng3f/p4N3/6eDd/+ng3f/p4N3/6eDd/9PCvP+rmpH/AAAAAAAAAAAAAAAAAAAAALywqv+ZgHD/mYBw/5mAcP+ZgHD/mYBw/5mAcP+ZgHD/mYBw/5mAcP+ZgHD/vLCq/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet" />
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- News CSS -->
+    <link rel="stylesheet" href="assets/css/news.css" />
+    <!-- Article CSS -->
+    <link rel="stylesheet" href="assets/css/article.css" />
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <style>
+      /* Additional style to fix page 2 readmore links */
+      .readmore svg {
+        display: none !important;
+      }
+
+      .readmore:after {
+        content: " »";
+      }
+    </style>
+  </head>
+  <body>
+    <div id="menu-overlay" class=""></div>
+    <div class="menu-overlay"></div>
+    <div class="main-wrapper">
+      <header class="header header-fixed sticky">
+        <div class="mid-header">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-3 col-12 header_top">
+                <div class="logo_center">
+                  <div class="logo">
+                    <a href="index.html" class="logo-wrapper">
+                      <img
+                        src="//bizweb.dktcdn.net/100/374/039/themes/894812/assets/logo.png?1676967946202"
+                        alt="Logistics Logo" />
+                    </a>
+                  </div>
+                </div>
+                <div class="menu-bar-mobile menu-bar-h nav-mobile-button">
+                  <div class="menu-bar">
+                    <svg
+                      class="category"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 448 512">
+                      <path
+                        d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"></path>
+                    </svg>
+                    <svg
+                      class="closes"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 352 512">
+                      <path
+                        d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-9 col-12 header_bottom">
+                <div class="header_menu clearfix">
+                  <div class="wrap_main menu_mobile">
+                    <nav class="header-nav">
+                      <ul class="item_big heavnal">
+                        <li class="nav-item">
+                          <a
+                            class="a-img"
+                            href="index.html#ve-chung-toi"
+                            title="Về chúng tôi">
+                            <span>Về chúng tôi</span>
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a
+                            class="a-img"
+                            href="index.html#dich-vu"
+                            title="Dịch vụ">
+                            <span>Dịch vụ</span>
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a
+                            class="a-img"
+                            href="index.html#van-chuyen"
+                            title="Vận chuyển">
+                            <span>Vận chuyển</span>
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a
+                            class="a-img"
+                            href="index.html#thong-ke"
+                            title="Thống kê">
+                            <span>Thống kê</span>
+                          </a>
+                        </li>
+                        <li class="nav-item active">
+                          <a class="a-img" href="news.html" title="Tin tức">
+                            <span>Tin tức</span>
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a
+                            class="a-img"
+                            href="index.html#lien-he"
+                            title="Liên hệ">
+                            <span>Liên hệ</span>
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="a-img" href="Price.html" title="Báo giá">
+                            <span>Báo giá</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </nav>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main>
+        <div id="menu-overlay" class=""></div>
+
+        <div class="breadcrumb_background clearfix">
+          <div class="title_full clearfix">
+            <div class="container a-center">
+              <h1 class="title_page">Tin tức</h1>
+            </div>
+          </div>
+          <section class="bread-crumb">
+            <span class="crumb-border"></span>
+            <div class="container">
+              <div class="rows">
+                <div class="col-xs-12 a-left">
+                  <ul class="breadcrumb">
+                    <li class="home">
+                      <a href="index.html"><span>Trang chủ</span></a>
+                      <span class="mr_lr">&nbsp;/&nbsp;</span>
+                    </li>
+                    <li>
+                      <a href="news.html"><span>Tin tức</span></a>
+                      <span class="mr_lr">&nbsp;/&nbsp;</span>
+                    </li>
+                    <li>
+                      <strong
+                        ><span
+                          >Bùng nổ dịch vụ chuyển phát nhanh quốc tế</span
+                        ></strong
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        </section> 
+        <section class="blogpage article_bg clearfix">
+          <div
+            class="container article-wraper"
+            itemscope=""
+            itemtype="https://schema.org/Article">
+            <meta
+              itemprop="mainEntityOfPage"
+              content="/bung-no-dich-vu-chuyen-phat-nhanh-quoc-te" />
+            <meta itemprop="description" content="" />
+            <meta itemprop="author" content="Nguyễn Tuấn Minh" />
+            <meta
+              itemprop="headline"
+              content="Bùng nổ dịch vụ chuyển phát nhanh quốc tế" />
+            <meta
+              itemprop="image"
+              content="https:https://bizweb.dktcdn.net/100/374/039/articles/content4.jpg?v=1577157046447" />
+            <meta itemprop="datePublished" content="24-12-2019" />
+            <meta itemprop="dateModified" content="24-12-2019" />
+            <div
+              class="wrap_background_aside padding-top-30 padding-bottom-40 clearfix">
+              <div class="row">
+                <section class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                  <article class="article-main clearfix">
+                    <div class="article-details clearfix">
+                      <span class="post-time"> 24/12/2019 </span>
+                      <h1 class="article-title clearfix">
+                        Bùng nổ dịch vụ chuyển phát nhanh quốc tế
+                      </h1>
+                      <div class="article-content clearfix">
+                        <div class="rte">
+                          <p id="plhMain_NewsDetail1_divSapoLive">
+                            <em
+                              ><strong
+                                >Cùng với sự phát triển của thương mại điện tử,
+                                các dịch vụ chuyển phát nhanh quốc tế đang ngày
+                                càng phát triển, đa dạng, tạo thêm nhiều sự lựa
+                                chọn chuyển phát nhanh quốc tế cho khách hàng.
+                                Không còn phải ra bưu điện, hiện nay, khách hàng
+                                có thể ngồi một chỗ và click chuột để chuyển
+                                hàng và nhận hàng từ nước ngoài.</strong
+                              ></em
+                            >
+                          </p>
+                          <p style="text-align: center">
+                            <em
+                              ><strong
+                                ><img
+                                  data-thumb="original"
+                                  original-height="532"
+                                  original-width="800"
+                                  src="https://bizweb.dktcdn.net/100/374/039/files/transport-og-logistik-unique-human-capital.jpg" /></strong
+                            ></em>
+                          </p>
+                          <p>
+                            Ngày nay, người dân có xu hướng mua và nhận hàng từ
+                            nước ngoài qua các trang bán hàng online. Nhờ đó,
+                            các công ty chuyển phát nhanh thành lập ngày càng
+                            nhiều. Khách hàng có thể lựa chọn nhiều dịch vụ, so
+                            sánh để đưa ra quyết định chọn dịch vụ nào tốt nhất
+                            cho hàng hóa của mình.
+                          </p>
+                          <p>&nbsp;</p>
+                          <p>
+                            <br />
+                            "Các công ty chuyển phát nhanh quốc tế xuất hiện
+                            ngày càng nhiều và có giá phải chăng như DHL, TNT,
+                            Viettel Post, VNPost,… Thời gian chuyển hàng cũng
+                            rút ngắn hơn", chị Kiều chia sẻ.Chị Nguyễn Kiều, một
+                            người Việt sinh sống tại Hàn Quốc, chuyên bán hàng
+                            Hàn Quốc cho khách Việt Nam chia sẻ, nếu như trước
+                            đây thường phải giao hàng cho khách qua đường bưu
+                            điện, hoặc chuyển qua đường hàng không về nước rồi
+                            có shipper chuyển hàng thì nay chị đã có nhiều sự
+                            lựa chọn hơn.
+                          </p>
+                          <p>
+                            Dạo qua các trang web dịch vụ chuyển phát nhanh có
+                            thể thấy, dịch vụ này rất đa dạng và được phân chia
+                            thành các thị trường lớn như chuyển phát nhanh đi
+                            Nga, Nhật, Mỹ, Úc…
+                          </p>
+                          <p>
+                            Chẳng hạn như Công ty Chuyển phát nhanh DHL mới đây
+                            đã ra mắt dịch vụ phát hàng theo yêu cầu, giúp việc
+                            mua sắm trực tuyến quốc tế dễ dàng hơn. Dịch vụ với
+                            hơn 45 ngôn ngữ triển khai trên 100 quốc gia. Với
+                            dịch vụ này, người gửi hàng có thể tùy chọn phương
+                            thức vận chuyển phù hợp, sau đó DHL sẽ chủ động gửi
+                            tin nhắn hoặc email để xác nhận cũng như thông báo
+                            trạng thái của đơn hàng. Dịch vụ mới đặc biệt phù
+                            hợp với các yêu cầu giao hàng trong khối thương mại
+                            điện tử quốc tế với phần lớn các lô hàng được gửi
+                            đến địa chỉ nhà ở.
+                          </p>
+                          <p>
+                            Đại diện Công ty DHL chia sẻ: "Chúng tôi nhận thấy
+                            số lượng đơn hàng được vận chuyển trong khối thương
+                            mại điện tử đã tăng từ 10% năm 2013 lên hơn 20% năm
+                            2016 trong tổng số các đơn hàng quốc tế của DHL
+                            Express. Sự tăng trưởng này được thúc đẩy bởi ngày
+                            một nhiều khách hàng có nhu cầu sử dụng các sản phẩm
+                            cao cấp từ thị trường nước ngoài, các nhà bán lẻ
+                            ngày càng muốn xâm nhập và mở rộng các thị trường
+                            mới".
+                          </p>
+                          <p>
+                            Anh Tuấn Anh (Hai Bà Trưng, Hà Nội), khách hàng
+                            thường nhận hàng Nhật qua các dịch vụ chuyển phát
+                            nhanh quốc tế, cho biết, hàng được chuyển về tận
+                            nhà. Trong quá trình hàng được chuyển, khách hàng
+                            còn có thể kiểm tra hàng đi đến đâu, qua những bước
+                            thủ tục nhập cảnh chưa…
+                          </p>
+                          <p>
+                            Các dịch vụ chuyển phát nhanh đang ngày càng gần
+                            gũi, đáp ứng nhu cầu khách hàng tốt hơn. Khách hàng
+                            có thể sử dụng dịch vụ trên bất kỳ thiết bị nào như
+                            điện thoại, máy tính, máy tính bảng. Người nhận có
+                            thể lên lịch và sắp xếp thời gian nhận hàng tại quầy
+                            giao dịch gần nhất hoặc địa chỉ nhà riêng của mình,
+                            thậm chí yêu cầu đơn vị vận chuyển giữ món hàng nếu
+                            khách đang trong kỳ nghỉ.
+                          </p>
+                          <p>
+                            Chuyển phát nhanh là một khâu quan trọng trong lĩnh
+                            vực hậu cần của lĩnh vực logistics. Lĩnh vực này của
+                            Việt Nam trước nay đều bị đánh giá là kém phát
+                            triển, thiếu chuyên nghiệp do cách làm việc thiếu
+                            liên kết, nhỏ lẻ. Với sự tham gia của các doanh
+                            nghiệp nước ngoài, dịch vụ chuyển phát nhanh chắc
+                            chắn sẽ chuyên nghiệp hơn, tạo thêm nhiều sự lựa
+                            chọn cho khách hàng. Theo các cơ quan quản lý, dịch
+                            vụ này sẽ còn tiếp tục phát triển mạnh do dư địa còn
+                            rất lớn.
+                          </p>
+                          <p>
+                            Đây là dấu hiệu tích cực cho thương mại Việt Nam
+                            trong bối cảnh giao lưu kinh tế quốc tế mạnh mẽ, nhu
+                            cầu vận chuyển hàng hóa ngày càng lớn. Nhu cầu mua
+                            sắm hàng hóa ngoại của người dân cũng ngày càng cao
+                            và đòi hỏi phải có những dịch vụ chuyên nghiệp.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="w-100 clearfix">
+                      <div class="w-100 clear-fix">
+                        <div class="form-coment">
+                          <div class="margin-top-0 margin-bottom-20 w-100">
+                            <h5 class="title-form-coment">Viết bình luận:</h5>
+                          </div>
+                          <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                              <fieldset class="form-group padding-0">
+                                <input
+                                  placeholder="Họ tên"
+                                  type="text"
+                                  class="form-control form-control-lg"
+                                  value=""
+                                  id="full-name"
+                                  name="Author"
+                                  required="" />
+                              </fieldset>
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                              <fieldset class="form-group padding-0">
+                                <input
+                                  placeholder="Email"
+                                  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,63}$"
+                                  type="email"
+                                  class="form-control form-control-lg"
+                                  value=""
+                                  name="Email"
+                                  required="" />
+                              </fieldset>
+                            </div>
+                            <fieldset
+                              class="form-group padding-right-15 padding-left-15 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                              <textarea
+                                placeholder="Nội dung"
+                                class="form-control form-control-lg"
+                                id="comment"
+                                name="Body"
+                                rows="6"
+                                required=""></textarea>
+                            </fieldset>
+                            <div
+                              class="margin-bottom-fix margin-bottom-50-article clearfix padding-right-15 padding-left-15">
+                              <button
+                                type="submit"
+                                class="btn btn-primary button_45">
+                                Gửi bình luận
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="blog-related clearfix">
+                      <div class="title-related clearfix">
+                        <a href="news.html" title="Tin bài liên quan"
+                          >Tin bài liên quan</a
+                        >
+                      </div>
+
+                      <div class="list_blog clearfix">
+                        <svg
+                          width="12"
+                          height="12"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 448 512">
+                          <path
+                            d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34zm192-34l-136-136c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l96.4 96.4-96.4 96.4c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l136-136c9.4-9.2 9.4-24.4 0-33.8z"></path>
+                        </svg>
+                        <a
+                          class="blog-title"
+                          href="tai-sao-noi-mien-phi-van-chuyen-la-yeu-to-canh-tranh-trong-thoi-dai-cong-nghe.html"
+                          title="Tại sao nói miễn phí vận chuyển là yếu tố cạnh tranh trong thời đại công nghệ?">
+                          Tại sao nói miễn phí vận chuyển là yếu tố cạnh tranh
+                          trong thời đại công nghệ?
+                        </a>
+                      </div>
+
+                      <div class="list_blog clearfix">
+                        <svg
+                          width="12"
+                          height="12"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 448 512">
+                          <path
+                            d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34zm192-34l-136-136c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l96.4 96.4-96.4 96.4c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l136-136c9.4-9.2 9.4-24.4 0-33.8z"></path>
+                        </svg>
+                        <a
+                          class="blog-title"
+                          href="danh-gia-va-lua-chon-nha-van-tai-mot-cach-hieu-qua.html"
+                          title="Đánh giá và lựa chọn nhà vận tải một cách hiệu quả">
+                          Đánh giá và lựa chọn nhà vận tải một cách hiệu quả
+                        </a>
+                      </div>
+
+                      <div class="list_blog clearfix">
+                        <svg
+                          width="12"
+                          height="12"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 448 512">
+                          <path
+                            d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34zm192-34l-136-136c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l96.4 96.4-96.4 96.4c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l136-136c9.4-9.2 9.4-24.4 0-33.8z"></path>
+                        </svg>
+                        <a
+                          class="blog-title"
+                          href="7-kinh-nghiem-can-phai-biet-khi-can-van-chuyen-hang-hoa.html"
+                          title="7 kinh nghiệm cần phải biết khi cần vận chuyển hàng hóa">
+                          7 kinh nghiệm cần phải biết khi cần vận chuyển hàng
+                          hóa
+                        </a>
+                      </div>
+                    </div>
+                  </article>
+                </section>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="copyright">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                <div class="wsp">
+                  <span>© Bản quyền thuộc về <b>Awesome Team</b></span>
+                  <span>|</span>
+                  <span>Cung cấp bởi</span>
+                  <a href="https://www.sapo.vn" rel="nofollow" target="_blank"
+                    >Sapo</a
+                  >
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                <ul class="follow_option">
+                  <li>
+                    <a href="#" title="Facebook"
+                      ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 320 512">
+                        <path
+                          d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path></svg
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="#" title="Twitter"
+                      ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512">
+                        <path
+                          d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="#" title="Google"
+                      ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 488 512">
+                        <path
+                          d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"></path></svg
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="#" title="Instagram"
+                      ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 448 512">
+                        <path
+                          d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <a href="#" id="back-to-top" class="backtop" title="Lên đầu trang">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <path
+              d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z"></path>
+          </svg>
+        </a>
+      </footer>
+    </div>
+
+    <!-- jQuery (required before Bootstrap) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <!-- WOW JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <!-- Custom JS -->
+    <script src="./assets/js/main.js"></script>
+    <!-- Navigation JS -->
+    <script src="./assets/js/navigation.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Initialize WOW.js for animations
+        new WOW().init();
+
+        // Smooth scroll for links
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+          anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+
+            const targetId = this.getAttribute("href");
+            if (targetId === "#") return;
+
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+              window.scrollTo({
+                top: targetElement.offsetTop - 80,
+                behavior: "smooth",
+              });
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
