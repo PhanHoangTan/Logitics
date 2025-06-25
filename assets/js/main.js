@@ -240,70 +240,28 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Counter animation for statistics
-  const counters = document.querySelectorAll(".counter");
-  const speed = 200; // The lower the slower
+  // Improved Counter animation for statistics
+  const animateStatCounter = (element, start, end, duration) => {
+    let startTimestamp = null;
+    const step = (timestamp) => {
+      if (!startTimestamp) startTimestamp = timestamp;
+      const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+      const currentValue = Math.floor(progress * (end - start) + start);
+      element.textContent = currentValue;
 
-  const startCounters = () => {
-    counters.forEach((counter) => {
-      const updateCount = () => {
-        const target =
-          +counter.getAttribute("data-target") || +counter.innerText;
-        const count = +counter.innerText.replace(/,/g, "") || 0;
-        const increment = target / speed;
-
-        if (count < target) {
-          counter.innerText = Math.ceil(count + increment);
-          setTimeout(updateCount, 1);
-        } else {
-          counter.innerText = target.toLocaleString();
-        }
-      };
-
-      // Set data-target attribute if not present
-      if (!counter.getAttribute("data-target")) {
-        counter.setAttribute("data-target", counter.innerText);
+      if (progress < 1) {
+        window.requestAnimationFrame(step);
+      } else {
+        element.textContent = end;
       }
-
-      counter.innerText = "0";
-      updateCount();
-    });
+    };
+    window.requestAnimationFrame(step);
   };
 
-  // Start counters when they come into view
-  const statsSection = document.querySelector(".section_stats");
-  if (statsSection) {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            startCounters();
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.5 }
-    );
-
-    observer.observe(statsSection);
-  }
-
-  // Initialize lazy loading for images
-  document.querySelectorAll(".lazyload").forEach(function (el) {
-    if (el.dataset.src) {
-      if (el.tagName.toLowerCase() === "img") {
-        el.src = el.dataset.src;
-      } else {
-        el.style.backgroundImage = "url(" + el.dataset.src + ")";
-      }
-      el.dataset.wasProcessed = true;
-    }
-  });
-
-  // Animate progress bars when they come into view
+  // Animate progress bars and counters when they come into view
   const progressBars = document.querySelectorAll(".progress-bar");
   if (progressBars.length > 0) {
-    const animateProgressBars = () => {
+    const animateProgressBarsAndCounters = () => {
       progressBars.forEach((bar) => {
         const rect = bar.getBoundingClientRect();
         const isInViewport =
@@ -315,26 +273,73 @@ document.addEventListener("DOMContentLoaded", function () {
             (window.innerWidth || document.documentElement.clientWidth);
 
         if (isInViewport && !bar.classList.contains("animated")) {
-          const width =
-            (bar.getAttribute("aria-valuenow") /
-              bar.getAttribute("aria-valuemax")) *
-              100 +
-            "%";
+          // Get the target value
+          const targetValue = parseInt(bar.getAttribute("aria-valuenow"));
+          const maxValue = parseInt(bar.getAttribute("aria-valuemax"));
+          const width = (targetValue / maxValue) * 100 + "%";
+
+          // First set width to 0
           bar.style.width = "0%";
+          bar.textContent = "0";
+
+          // Animate the width
           setTimeout(() => {
+            bar.style.transition = "width 2s ease-in-out";
             bar.style.width = width;
+
+            // Animate the counter
+            animateStatCounter(bar, 0, targetValue, 2000);
+
             bar.classList.add("animated");
-          }, 100);
+          }, 200);
         }
       });
     };
 
     // Run once on page load
-    animateProgressBars();
+    animateProgressBarsAndCounters();
 
-    // Run on scroll
-    window.addEventListener("scroll", animateProgressBars);
+    // Create an Intersection Observer
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            animateProgressBarsAndCounters();
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    // Observe the section containing progress bars
+    const statsSection = document.querySelector("#thong-ke");
+    if (statsSection) {
+      observer.observe(statsSection);
+    }
   }
+
+  // Initialize lazy loading for images
+  document.querySelectorAll(".lazyload").forEach(function (el) {
+    if (el.dataset.src) {
+      if (el.tagName.toLowerCase() === "img") {
+        // Create an observer for lazy loading
+        const observer = new IntersectionObserver((entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const img = entry.target;
+              img.src = img.dataset.src;
+              observer.unobserve(img);
+            }
+          });
+        });
+
+        observer.observe(el);
+      } else {
+        el.style.backgroundImage = "url(" + el.dataset.src + ")";
+      }
+      el.dataset.wasProcessed = true;
+    }
+  });
 });
 
 // Back to top button functionality
