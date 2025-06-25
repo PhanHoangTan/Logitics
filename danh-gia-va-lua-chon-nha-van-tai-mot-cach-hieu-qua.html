@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đánh giá và lựa chọn nhà vận tải một cách hiệu quả</title>
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAABILAAASCwAAAAAAAAAAAAAAAAAAAAAAAAAAAAC8sKr/mYBw/5mAcP+ZgHD/mYBw/5mAcP+ZgHD/mYBw/5mAcP+ZgHD/mYBw/7ywqv8AAAAAAAAAAAAAAAAAAAAAq5qR/9PCvP/p4N3/6eDd/+ng3f/p4N3/6eDd/+ng3f/p4N3/6eDd/9PCvP+rmpH/AAAAAAAAAAAAAAAAAAAAAKuakf/TwrzAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA00MK8/6uakf8AAAAAAAAAAAAAAAAAAAAAq5qR/9PCvP/p4N3/6eDd/+ng3f/p4N3/6eDd/+ng3f/p4N3/6eDd/9PCvP+rmpH/AAAAAAAAAAAAAAAAAAAAAKuakf/TwrzAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA00MK8/6uakf8AAAAAAAAAAAAAAAAAAAAAq5qR/9PCvP/p4N3/6eDd/+ng3f/p4N3/6eDd/+ng3f/p4N3/6eDd/9PCvP+rmpH/AAAAAAAAAAAAAAAAAAAAALywqv+ZgHD/mYBw/5mAcP+ZgHD/mYBw/5mAcP+ZgHD/mYBw/5mAcP+ZgHD/vLCq/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet" />
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- News CSS -->
+    <link rel="stylesheet" href="assets/css/news.css" />
+    <!-- Article CSS -->
+    <link rel="stylesheet" href="assets/css/article.css" />
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <style>
+      /* Additional style to fix page 2 readmore links */
+      .readmore svg {
+        display: none !important;
+      }
+
+      .readmore:after {
+        content: " »";
+      }
+    </style>
+  </head>
+  <body>
+    <div id="menu-overlay" class=""></div>
+    <div class="menu-overlay"></div>
+    <div class="main-wrapper">
+      <header class="header header-fixed sticky">
+        <div class="mid-header">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-3 col-12 header_top">
+                <div class="logo_center">
+                  <div class="logo">
+                    <a href="index.html" class="logo-wrapper">
+                      <img
+                        src="//bizweb.dktcdn.net/100/374/039/themes/894812/assets/logo.png?1676967946202"
+                        alt="Logistics Logo" />
+                    </a>
+                  </div>
+                </div>
+                <div class="menu-bar-mobile menu-bar-h nav-mobile-button">
+                  <div class="menu-bar">
+                    <svg
+                      class="category"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 448 512">
+                      <path
+                        d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"></path>
+                    </svg>
+                    <svg
+                      class="closes"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 352 512">
+                      <path
+                        d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-9 col-12 header_bottom">
+                <div class="header_menu clearfix">
+                  <div class="wrap_main menu_mobile">
+                    <nav class="header-nav">
+                      <ul class="item_big heavnal">
+                        <li class="nav-item">
+                          <a
+                            class="a-img"
+                            href="index.html#ve-chung-toi"
+                            title="Về chúng tôi">
+                            <span>Về chúng tôi</span>
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a
+                            class="a-img"
+                            href="index.html#dich-vu"
+                            title="Dịch vụ">
+                            <span>Dịch vụ</span>
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a
+                            class="a-img"
+                            href="index.html#van-chuyen"
+                            title="Vận chuyển">
+                            <span>Vận chuyển</span>
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a
+                            class="a-img"
+                            href="index.html#thong-ke"
+                            title="Thống kê">
+                            <span>Thống kê</span>
+                          </a>
+                        </li>
+                        <li class="nav-item active">
+                          <a class="a-img" href="news.html" title="Tin tức">
+                            <span>Tin tức</span>
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a
+                            class="a-img"
+                            href="index.html#lien-he"
+                            title="Liên hệ">
+                            <span>Liên hệ</span>
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="a-img" href="Price.html" title="Báo giá">
+                            <span>Báo giá</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </nav>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main>
+        <div id="menu-overlay" class=""></div>
+
+        <div class="breadcrumb_background clearfix">
+	<div class="title_full clearfix">
+		<div class="container a-center">
+			<p class="title_page">Tin tức</p>
+		</div>
+	</div>
+	<section class="bread-crumb">
+	<span class="crumb-border"></span>
+	<div class="container">
+		<div class="rows">
+			<div class="col-xs-12 a-left">
+				<ul class="breadcrumb">					
+					<li class="home">
+						<a href="index.html"><span>Trang chủ</span></a>						
+						<span class="mr_lr">&nbsp;/&nbsp;</span>
+					</li>
+					
+					<li>
+						<a href="news.html"><span>Tin tức</span></a>	
+						<span class="mr_lr">&nbsp;/&nbsp;</span>
+					</li>
+					<li><strong><span>Đánh giá và lựa chọn nhà vận tải một cách hiệu quả</span></strong></li>
+					
+				</ul>
+			</div>
+		</div>
+	</div>
+</section> 
+</div> 
+<section class="blogpage article_bg clearfix">
+	<div class="container article-wraper" itemscope="" itemtype="https://schema.org/Article">
+		<meta itemprop="mainEntityOfPage" content="/danh-gia-va-lua-chon-nha-van-tai-mot-cach-hieu-qua">
+		<meta itemprop="description" content="">
+		<meta itemprop="author" content="Nguyễn Tuấn Minh">
+		<meta itemprop="headline" content="Đánh giá và lựa chọn nhà vận tải một cách hiệu quả">
+		<meta itemprop="image" content="https:https://bizweb.dktcdn.net/100/374/039/articles/content6.jpg?v=1577161304093">
+		<meta itemprop="datePublished" content="24-12-2019">
+		<meta itemprop="dateModified" content="24-12-2019">
+		<div itemprop="publisher" itemscope="" itemtype="https://schema.org/Organization">
+			<div itemprop="logo" itemscope="" itemtype="https://schema.org/ImageObject">
+				<img class="hidden" src="//bizweb.dktcdn.net/100/374/039/themes/894812/assets/logo.png?1676967946202" alt="Template Logistics">
+				<meta itemprop="url" content="https://bizweb.dktcdn.net/100/374/039/themes/894812/assets/logo.png?1676967946202">
+				<meta itemprop="width" content="400">
+				<meta itemprop="height" content="60">
+			</div>
+			<meta itemprop="name" content="Template Logistics">
+		</div>
+		<div class="wrap_background_aside padding-top-30 padding-bottom-40 clearfix">
+			<div class="row">		
+				<section class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<article class="article-main clearfix">
+						<div class="article-details clearfix">
+							<span class="post-time">
+								24/12/2019
+							</span>
+							<h1 class="article-title clearfix">Đánh giá và lựa chọn nhà vận tải một cách hiệu quả</h1>
+							<div class="article-content clearfix">
+								<div class="rte">
+									<h2>Phân phối là một trong những ngành quan trọng ở Indonesia với các hoạt động liên quan đến bán buôn, nhập khẩu, xuất khẩu và bán lẻ. Phân phối được định nghĩa là một ngành thiết yếu, đảm bảo sản phẩm có sẵn cho người mua bằng cách phân bổ nó thông qua thị trường. Các bước để phân phối bao gồm vận chuyển, đóng gói và giao hàng.</h2>
+<p>&nbsp;</p>
+<p style="text-align: center;"><img alt="" data-src="" data-type="image" id="innercomp_hgsg2c3simgimage" src="//bizweb.dktcdn.net/100/374/039/articles/content6.jpg?v=1577161304093"></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>Để hỗ trợ các nhà quản lý trong quá trình đánh giá, chúng tôi xin giới thiệu bản hướng dẫn đánh giá các nhà vận tải theo một vài tiêu chí khách quan. Tuỳ thuộc vào nhu cầu kinh doanh của công ty, bạn hãy xác định các tiêu chí quan trọng nhất và dựa vào đó để chọn nhà cung cấp phù hợp.<br>
+&nbsp;</p>
+<p>1. Các loại đối tác vận tải</p>
+<p>&nbsp;</p>
+<p>Nhà vận tải là các công ty cung cấp dịch vụ vận chuyển hàng không,đường biển hoặc đường bộ.&nbsp;Có hai loại nhà vận tải chính: tư nhân và cho thuê. Một nhà vận tải tư nhân sẽ cung cấp dịch vụ cho công ty và ngành công nghiệp có nhu cầu sở hữu hoặc cho thuê phương tiện, và không tính thêm phí ngoài phí dịch vụ. Mặt khác, nhà vận tải cho thuê sẽ cung cấp dịch vụ cho công chúng với một mức phí kèm theo, đồng thời tuân thủ các quy định của Nhà nước về mức giá, tuyến đường và thị trường phục vụ.</p>
+<p style="text-align: center;"><img alt="" data-src="" data-type="image" id="innercomp_uzjd1mqhimgimage" itemprop="image" src="//bizweb.dktcdn.net/thumb/1024x1024/100/374/039/articles/content6.jpg?v=1577161304093"></p>
+<ul>
+<li>
+<p>Nhà vận tải tư nhân: Nhóm cung cấp vận tải độc quyền trong một tổ chức. Các đội xe tư nhân sẽ được sử dụng để vận chuyển hàng hóa từ nhà cung cấp, giúp giảm chi phí vận hành chung. Phần lớn các phương tiện giao thông cá nhân như ô tô và xe bán tải có thể hoạt động như một phương thức quảng cáo, với hình thức "biển quảng cáo di động".</p></li>
+<li>
+<p>Hãng vận tải thông thường:&nbsp;Các phương tiện giao thông đều là công khai và hãng không cung cấp gói dịch vụ đặc biệt cho bất kỳ một tổ chức nào. Quy định của các hãng này thường dựa vào mức phí, trách nhiệm pháp lý và dịch vụ được cung cấp.</p></li>
+<li>
+<p>Nhà vận tải hợp đồng:&nbsp;Loại hình công ty này không phục vụ công chúng nói chung, nhưng cho thuê vận tải với số lượng tài xế hạn chế và theo một hợp đồng cụ thể. Họ không có nghĩa vụ cung cấp dịch vụ cho công chúng mà chỉ phục vụ khách hàng đã ký hợp đồng.</p></li>
+<li>
+<p>Vận tải miễn thuế:&nbsp;Một hãng vận tải cho thuê nhưng không bị phụ thuộc vào pháp luật kinh tế, ví dụ như taxi hoặc xe tải chở hàng. Họ không bị hạn chế về các tuyến đường, khu vực phục vụ hoặc giá. Điều kiện miễn trừ của họ được xác định bởi loại sản phẩm được vận chuyển và tính chất của tổ chức.</p></li>
+<li>
+<p>NVOCC (Non Vessel Owning Common Carrier):&nbsp;công ty kinh doanh trong lĩnh vực cước vận tải biển, được xem là nhà vận tải đường biển (Carrier) nhưng lại khác với các hãng tàu (Shipping Line), có nghĩa là họ không sở hữu con tàu nào. Hoạt động của NVOCC bao gồm bán hàng, chất hàng và vận chuyển container đến các cổng vận chuyển. Các vấn đề vận đơn và phân phối ở nước ngoài sẽ được quản lý bởi các đại lý NVOCC.</p></li></ul>
+<p>&nbsp;</p>
+<p>2. Các yếu tố cần xem xét khi đánh giá nhà vận tải</p>
+<p>&nbsp;</p>
+<p>a. Chi phí và chất lượng</p>
+<p>&nbsp;</p>
+<p>Giá cả là một yếu tố quyết định trong quá trình lựa chọn nhà vận tải và thường là một trong những thông tin mà nhà cung cấp dịch vụ phải đáp ứng được. Ngoài phí dịch vụ, các công ty sẽ kiểm tra chất lượng dịch vụ được cung cấp bởi đối tác tiềm năng. Cùng với yếu tố thời gian, những yếu tố trên sẽ giúp các nhà quản lý giảm rủi ro khi lựa chọn một đối tác phù hợp cho công ty.</p>
+<p>&nbsp;</p>
+<p style="text-align: center;"><img alt="" data-src="" data-type="image" id="innercomp_txtMedia23o5imgimage" itemprop="image" src="//bizweb.dktcdn.net/thumb/1024x1024/100/374/039/articles/content6.jpg?v=1577161304093"></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>b. Thời gian vận chuyển và độ tin cậy</p>
+<p>&nbsp;</p>
+<p>Một nhà vận tải nên được lựa chọn dựa trên tốc độ và độ tin cậy. Sự thành công của doanh nghiệp phụ thuộc vào việc hàng hóa được vận chuyển kịp thời đến đúng địa điểm cần thiết. Một đối tác đáng tin cậy sẽ xây dựng cho công ty của bạn một hình ảnh tích cực và giúp phát triển doanh nghiệp của bạn bằng cách đáp ứng nhu cầu khách hàng. Chọn một đối tác minh bạch trong giao tiếp cũng rất quan trọng. Nhà vận tải sẽ có trách nhiệm hơn với lô hàng, và bạn sẽ không phải lo lắng về tình trạng của hàng hoá.</p>
+<p>&nbsp;</p>
+<p>c. Dịch vụ và công suất</p>
+<p><br>
+Hãng vận tải được đưa vào diện xem xét phải có đủ năng lực để phục vụ nhu cầu vận chuyển của công ty. Hãy tự đặt những câu hỏi như: hãng vận tải cung cấp những dịch vụ gì? Những dịch vụ này có phục vụ các yêu cầu của công ty bạn không? Nhà vận tải đó phải có các thiết bị và nguồn lực cần thiết, cũng như khả năng đảm bảo chất lượng cho lô hàng cần vận chuyển.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p style="text-align: center;"><img alt="" data-src="" data-type="image" id="innercomp_txtMedia8eimgimage" itemprop="image" src="//bizweb.dktcdn.net/thumb/1024x1024/100/374/039/articles/content6.jpg?v=1577161304093"></p>
+<p>&nbsp;</p>
+<p>d. Phạm vi địa lý</p>
+<p><br>
+Lựa chọn một nhà vận tải có thể cung cấp dịch vụ trên tuyến đường vận chuyển hàng hóa của bạn với tần suất theo yêu cầu cũng là một yếu tố quan trọng. Nếu công ty có ý định thiết lập mối quan hệ lâu dài và có lợi cho tất cả các bên, nên xem xét cả các mục tiêu trong hiện tại lẫn dự kiến.</p>
+<p>&nbsp;</p>
+<p>e. Bảo vệ sản phẩm</p>
+<p><br>
+Sự an toàn mang ý nghĩa rất lớn đối với một công ty cũng như khách hàng. Một nhà vận tải có tỷ lệ tai nạn thấp và phí dịch vụ cao hơn vẫn tối ưu hơn so với một nhà cung cấp có phí dịch vụ thấp hơn nhưng tỷ lệ tai nạn lại ở mức báo động. Trong trường hợp tai nạn, các quá trình giao tiếp và xử lý của bên vận chuyển phải tuân theo tiêu chuẩn của tổ chức. Một hãng vận tải ưu tiên sự an toàn sẽ giúp công ty xây dựng danh tiếng ổn định, từ đó dẫn đến tăng doanh số.<br>
+&nbsp;</p>
+<p style="text-align: center;"><img alt="" data-src="" data-type="image" id="innercomp_txtMedia1ysnimgimage" itemprop="image" src="//bizweb.dktcdn.net/thumb/1024x1024/100/374/039/articles/content6.jpg?v=1577161304093"></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>f. Sự ổn định và bền vững</p>
+<p><br>
+Một hãng vận tải ổn định trên thị trường sẽ đảm bảo năng suất dịch vụ cho nhu cầu vận chuyển của công ty bạn. Về lâu dài, công ty sẽ được hưởng nhiều lợi ích khi thỏa thuận với một đối tác có vị thế ổn định trên thị trường và mức tăng trưởng bền vững.</p>
+<p><br>
+Đáp ứng xu hướng của thế kỷ 21, nhà vận tải nên tuân theo các mục tiêu bền vững và ý thức về môi trường. Giữa hai công ty danh tiếng, khách hàng ngày nay thường có xu hướng chọn công ty thân thiện với môi trường hơn.</p>
+								</div>
+							</div>
+						</div>
+						<div class="w-100 clearfix">
+							<div class="w-100 clear-fix">
+								<h5>Viết bình luận:</h5>
+								<form method="post" action="#" class="comment-form">
+									<div class="row">
+										<div class="col-md-6">
+											<input type="text" name="Author" placeholder="Họ tên" class="form-control" required>
+										</div>
+										<div class="col-md-6">
+											<input type="email" name="Email" placeholder="Email" class="form-control" required>
+										</div>
+										<div class="col-md-12">
+											<textarea name="Body" placeholder="Nội dung" class="form-control" rows="6" required></textarea>
+										</div>
+										<div class="col-md-12 mt-3">
+											<button type="submit" class="btn btn-primary">Gửi bình luận</button>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+						<div class="tin-bai-lien-quan">
+							<h3>Tin bài liên quan</h3>
+							<ul class="article-list">
+								<li class="article-item">
+									<a href="tai-sao-noi-mien-phi-van-chuyen-la-yeu-to-canh-tranh-trong-thoi-dai-cong-nghe.html">
+										Tại sao nói miễn phí vận chuyển là yếu tố cạnh tranh trong thời đại công nghệ?
+									</a>
+								</li>
+								<li class="article-item">
+									<a href="#">
+										7 kinh nghiệm cần phải biết khi cần vận chuyển hàng hóa
+									</a>
+								</li>
+								<li class="article-item">
+									<a href="#">
+										Bùng nổ dịch vụ chuyển phát nhanh quốc tế
+									</a>
+								</li>
+								<li class="article-item">
+									<a href="#">
+										Vận tải đa phương thức là gì
+									</a>
+								</li>
+							</ul>
+						</div>
+					</article>
+				</section>		
+			</div>
+		</div>
+	</div>
+</section>
+      
+        <footer class="footer">
+        <div class="copyright">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                <div class="wsp">
+                  <span>© Bản quyền thuộc về <b>Awesome Team</b></span>
+                  <span>|</span>
+                  <span>Cung cấp bởi</span>
+                  <a href="https://www.sapo.vn" rel="nofollow" target="_blank"
+                    >Sapo</a
+                  >
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                <ul class="follow_option">
+                  <li>
+                    <a href="#" title="Facebook"
+                      ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 320 512">
+                        <path
+                          d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path></svg
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="#" title="Twitter"
+                      ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512">
+                        <path
+                          d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="#" title="Google"
+                      ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 488 512">
+                        <path
+                          d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"></path></svg
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="#" title="Instagram"
+                      ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 448 512">
+                        <path
+                          d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <a href="#" id="back-to-top" class="backtop" title="Lên đầu trang">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <path
+              d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z"></path>
+          </svg>
+        </a>
+      </footer>
+    </div>
+
+    <!-- jQuery (required before Bootstrap) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <!-- WOW JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <!-- Custom JS -->
+    <script src="./assets/js/main.js"></script>
+    <!-- Navigation JS -->
+    <script src="./assets/js/navigation.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Initialize WOW.js for animations
+        new WOW().init();
+
+        // Smooth scroll for links
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+          anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+
+            const targetId = this.getAttribute("href");
+            if (targetId === "#") return;
+
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+              window.scrollTo({
+                top: targetElement.offsetTop - 80,
+                behavior: "smooth",
+              });
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
