@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Khái quát về vận tải đường biển - Logistics</title>
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAABILAAASCwAAAAAAAAAAAAAAAAAAAAAAAAAAAAC8sKr/mYBw/5mAcP+ZgHD/mYBw/5mAcP+ZgHD/mYBw/5mAcP+ZgHD/mYBw/7ywqv8AAAAAAAAAAAAAAAAAAAAAq5qR/9PCvP/p4N3/6eDd/+ng3f/p4N3/6eDd/+ng3f/p4N3/6eDd/9PCvP+rmpH/AAAAAAAAAAAAAAAAAAAAAKuakf/TwrzAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA00MK8/6uakf8AAAAAAAAAAAAAAAAAAAAAq5qR/9PCvP/p4N3/6eDd/+ng3f/p4N3/6eDd/+ng3f/p4N3/6eDd/9PCvP+rmpH/AAAAAAAAAAAAAAAAAAAAAKuakf/TwrzAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA00MK8/6uakf8AAAAAAAAAAAAAAAAAAAAAq5qR/9PCvP/p4N3/6eDd/+ng3f/p4N3/6eDd/+ng3f/p4N3/6eDd/9PCvP+rmpH/AAAAAAAAAAAAAAAAAAAAALywqv+ZgHD/mYBw/5mAcP+ZgHD/mYBw/5mAcP+ZgHD/mYBw/5mAcP+ZgHD/vLCq/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet" />
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- News CSS -->
+    <link rel="stylesheet" href="assets/css/news.css" />
+    <!-- Article CSS -->
+    <link rel="stylesheet" href="assets/css/article.css" />
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <style>
+      /* Additional style to fix page 2 readmore links */
+      .readmore svg {
+        display: none !important;
+      }
+
+      .readmore:after {
+        content: " »";
+      }
+    </style>
+  </head>
+  <body>
+    <div id="menu-overlay" class=""></div>
+    <div class="menu-overlay"></div>
+    <div class="main-wrapper">
+      <header class="header header-fixed sticky">
+        <div class="mid-header">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-3 col-12 header_top">
+                <div class="logo_center">
+                  <div class="logo">
+                    <a href="index.html" class="logo-wrapper">
+                      <img
+                        src="//bizweb.dktcdn.net/100/374/039/themes/894812/assets/logo.png?1676967946202"
+                        alt="Logistics Logo" />
+                    </a>
+                  </div>
+                </div>
+                <div class="menu-bar-mobile menu-bar-h nav-mobile-button">
+                  <div class="menu-bar">
+                    <svg
+                      class="category"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 448 512">
+                      <path
+                        d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"></path>
+                    </svg>
+                    <svg
+                      class="closes"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 352 512">
+                      <path
+                        d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-9 col-12 header_bottom">
+                <div class="header_menu clearfix">
+                  <div class="wrap_main menu_mobile">
+                    <nav class="header-nav">
+                      <ul class="item_big heavnal">
+                        <li class="nav-item">
+                          <a
+                            class="a-img"
+                            href="index.html#ve-chung-toi"
+                            title="Về chúng tôi">
+                            <span>Về chúng tôi</span>
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a
+                            class="a-img"
+                            href="index.html#dich-vu"
+                            title="Dịch vụ">
+                            <span>Dịch vụ</span>
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a
+                            class="a-img"
+                            href="index.html#van-chuyen"
+                            title="Vận chuyển">
+                            <span>Vận chuyển</span>
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a
+                            class="a-img"
+                            href="index.html#thong-ke"
+                            title="Thống kê">
+                            <span>Thống kê</span>
+                          </a>
+                        </li>
+                        <li class="nav-item active">
+                          <a class="a-img" href="news.html" title="Tin tức">
+                            <span>Tin tức</span>
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a
+                            class="a-img"
+                            href="index.html#lien-he"
+                            title="Liên hệ">
+                            <span>Liên hệ</span>
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="a-img" href="Price.html" title="Báo giá">
+                            <span>Báo giá</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </nav>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main>
+        <div id="menu-overlay" class=""></div>
+
+        <div class="breadcrumb_background clearfix">
+          <div class="title_full clearfix">
+            <div class="container a-center">
+              <h1 class="title_page">Khái quát về vận tải đường biển</h1>
+            </div>
+          </div>
+          <section class="bread-crumb">
+            <span class="crumb-border"></span>
+            <div class="container">
+              <div class="rows">
+                <div class="col-xs-12 a-left">
+                  <ul class="breadcrumb">
+                    <li class="home">
+                      <a href="index.html"><span>Trang chủ</span></a>
+                      <span class="mr_lr">&nbsp;/&nbsp;</span>
+                    </li>
+                    <li>
+                      <a href="news.html"><span>Tin tức</span></a>
+                      <span class="mr_lr">&nbsp;/&nbsp;</span>
+                    </li>
+                    <li>
+                      <strong
+                        ><span>Khái quát về vận tải đường biển</span></strong
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <section class="blogpage article_bg clearfix">
+          <div
+            class="container article-wraper"
+            itemscope=""
+            itemtype="https://schema.org/Article">
+            <meta
+              itemprop="mainEntityOfPage"
+              content="/khai-quat-ve-van-tai-duong-bien" />
+            <meta itemprop="description" content="" />
+            <meta itemprop="author" content="Nguyễn Tuấn Minh" />
+            <meta
+              itemprop="headline"
+              content="Khái quát về vận tải đường biển" />
+            <meta
+              itemprop="image"
+              content="https:https://bizweb.dktcdn.net/100/374/039/articles/content2.jpg?v=1577154666817" />
+            <meta itemprop="datePublished" content="24-12-2019" />
+            <meta itemprop="dateModified" content="24-12-2019" />
+            <div
+              itemprop="publisher"
+              itemscope=""
+              itemtype="https://schema.org/Organization">
+              <meta itemprop="name" content="Template Logistics" />
+            </div>
+            <div
+              class="wrap_background_aside padding-top-30 padding-bottom-40 clearfix">
+              <div class="row">
+                <section class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                  <article class="article-main clearfix">
+                    <div class="article-details clearfix">
+                      <span class="post-time"> 24/12/2019 </span>
+                      <h1 class="article-title clearfix">
+                        Khái quát về vận tải đường biển
+                      </h1>
+                      <div class="article-content clearfix">
+                        <div class="rte">
+                          <p>
+                            <strong
+                              >Một số khái quát chi tiết về con đường chuyên vận
+                              tải đường biển</strong
+                            >
+                          </p>
+                          <p>
+                            <strong
+                              >Tìm hiểu về con đường vận tải đường biển</strong
+                            >
+                          </p>
+                          <p>
+                            Vận tải đường biển&nbsp;được ra đời khá sớm so với
+                            các phương thức vận tải khác. Vào thế kỷ thứ V thời
+                            trước công nguyên con người đã biết sử dụng biển để
+                            giao lưu giữa các vùng với các miền khác nhau ,là
+                            con đường lưu thông giữa các quốc gia trên thế giới
+                            với nhau . Vì vậy , Vận tải biểm&nbsp;được phát
+                            triển mạnh tới hiện nay và đã trở thành ngành vận
+                            tải hiện đại nhất trong các hệ thống vận tải quốc
+                            tế.
+                          </p>
+                          <h2>
+                            &nbsp;<strong
+                              >I . Một số khái quát chung về vận tải đường
+                              biển</strong
+                            >
+                          </h2>
+                          <h3>
+                            <strong
+                              ><em
+                                >&nbsp; &nbsp; 1. Đặc điểm của nền kinh tế kỹ
+                                thuật vận tải đường biển.</em
+                              ></strong
+                            >
+                          </h3>
+                          <p>
+                            Phương thức vận tải qua đường biển có thể phục vụ
+                            tất cả các loại hàng hoá trong giới lưu thông buôn
+                            bán quốc tế.<br />
+                            Các tuyến đường vận tải trên vùng biển hầu hết đều
+                            là những tuyến đường giao thông tự nhiên.<br />
+                            Năng lực chuyên chở của vận tải đường biển khá lớn
+                            và phương thức vận tải này không bị hạn chế như các
+                            phương thức vận tải khác.<br />
+                            Ưu điểm nổi bật nhất của phương thức vận tải đường
+                            biển là chi phí giá thành thấp.
+                          </p>
+                          <p>
+                            <em
+                              >Tuy nhiên, phương thức vận tải này cũng có một số
+                              nhược điểm:</em
+                            >
+                          </p>
+                          <ul>
+                            <li>
+                              Phụ thuộc rất nhiều vào các yếu tố thời tiết ,điều
+                              kiện tự nhiên.
+                            </li>
+                            <li>
+                              Tốc độ của tàu biển khá thấp và việc tăng tốc độ
+                              khai thác của tàu biển còn khá hạn chế .
+                            </li>
+                          </ul>
+                          <p>
+                            Từ những đặc điểm trên , ta có thể rút ra được kết
+                            luận một cách tổng quát như sau:<br />
+                            -Vận tải đường biển thích hợp với việc chuyên chở
+                            hàng hoá trong lưu thông buôn bán quốc tế.<br />
+                            -Vận tải đường biển thích hợp với chuyên chở hàng
+                            hoá có khối lượng khá lớn, trên cự ly dài nhưng
+                            không đòi hỏi thời gian giao hàng phải nhanh chóng.
+                          </p>
+                          <h3>
+                            &nbsp; 2. Tác dụng của vận tải biển đối với việc
+                            buôn bán quốc tế.
+                          </h3>
+                          <p>
+                            – Là yếu tố không thể tách rời với buôn bán hàng
+                            quốc tế.<br />
+                            – Thúc đẩy lưu thông buôn bán quốc tế phát triển
+                            hơn<br />
+                            – Giúp phát triển để góp phần làm thay đổi cơ cấu
+                            hàng hoá và cơ cấu thị trường trong lưu thông buôn
+                            bán quốc tế.<br />
+                            – Tác động tới cán cân thanh toán quốc tế.
+                          </p>
+                          <h3>
+                            <strong
+                              ><em
+                                >&nbsp; 3. Các cơ sở vật chất kỹ thuật của
+                                phương thức vận tải biển</em
+                              ></strong
+                            >
+                          </h3>
+                          <p><em>Các tuyến đường trên biển</em></p>
+                          <p>
+                            Là các tuyến đường được nối giữa hai hay nhiều bến
+                            cảng với nhau ,mà trên đó các tàu biển hoạt động
+                            chuyên chở khách hoặc các loại hàng hoá.<br />
+                            <em>Bến cảng biển</em><br />
+                            Là nơi ra vào neo đậu của các tàu biển, là nơi luôn
+                            phục vụ tàu và các loại hàng hoá ở trên tàu và là
+                            một đầu mối giao thông vô cùng quan trọng của một
+                            quốc gia có biển.<br />
+                            <em>Các phương tiện vận chuyển</em><br />
+                            Phương tiện vận tải biển chủ yếu là các tàu biển,
+                            tàu biển được chia làm hai loại là : tàu buôn và tàu
+                            quân sự.<br />
+                            Tàu buôn là những loại tàu biển được dùng vào các
+                            mục đích kinh tế trong giới hàng hải. Tàu chở hàng
+                            được gọi là một loại tàu buôn chiếm tỷ lệ cao nhất
+                            trong các đội tàu buôn.
+                          </p>
+                          <h2>
+                            <strong
+                              >II. Các phương thức thuê tàu để chuyên chở hàng
+                              hoá</strong
+                            >
+                          </h2>
+                          <ol>
+                            <li>
+                              Trong hàng hải quốc tế có hai loại hình thức thuê
+                              tàu phổ biến là :
+                            </li>
+                          </ol>
+                          <ul>
+                            <li>Phương thức thuê tàu chợ</li>
+                            <li>Phương thức thuê tàu theo chuyến</li>
+                          </ul>
+                          <p>&nbsp;</p>
+
+                          <h3>
+                            <strong><em>Hình thức thuê tàu chợ</em></strong>
+                          </h3>
+                          <p>
+                            <strong
+                              >1.1. Khái niệm và một số đặc điểm của tàu
+                              chợ</strong
+                            ><br />
+                            <strong>a. Khái niệm</strong><br />
+                            Tàu chợ là là loại tàu chạy thường xuyên trên một
+                            tuyến đường nhất định và ghé qua một số cảng nhất
+                            định theo một lịch trình đã được định sẵn trước.<br />
+                            Tàu chợ thường hoạt động trên các tuyến đường nhất
+                            định nên người ta còn gọi đó là tậu định tuyến. Lịch
+                            chạy của tàu thường được các hãng tàu công bố trên
+                            các phương tiện thông tin đại chúng để phục vụ khách
+                            hàng tốt nhất.
+                          </p>
+                          <p><strong>b.Ðặc điểm tàu chợ</strong></p>
+                          <p>
+                            Tàu chợ thường chở các hàng bách hoá có khối lượng
+                            nhỏ.<br />
+                            Cấu tạo rất phức tạp so với các loại tàu khác.<br />
+                            Ðiều kiện chuyên chở &nbsp;hàng do các hãng tàu quy
+                            định và được in sẵn trên vận đơn của đường biển để
+                            phát hành cho người gửi hàng.
+                          </p>
+                          <p>
+                            <strong>1.2. Các phương thức thuê tàu chợ</strong>
+                          </p>
+                          <p><strong>a.Khái niệm</strong></p>
+                          <p>
+                            Thuê tàu chợ hay còn được người ta gọi là lưu cước
+                            tàu chợ
+                          </p>
+                          <p>
+                            Thuê tàu chợ là chủ hàng trực tiếp hay thông qua
+                            người môi giới được yêu cầu chuyển tàu cho mình thuê
+                            nguyên một phần chiếc tàu để chuyên chở các hàng hoá
+                            từ cảng này tới cảng khác.
+                          </p>
+                          <p>
+                            Mối quan hệ giữa người thuê với chủ cho thuê trong
+                            phương thức này được ký với nhau bằng một chứng từ
+                            gọi là&nbsp;<strong>vận đơn đường biển</strong>. Nội
+                            dung của vận đơn đường biển do các hãng tàu đã quy
+                            định sẵn.
+                          </p>
+                          <p>
+                            <strong>b.Các bước tiến hành thuê tàu chợ</strong>
+                          </p>
+                          <p>Quy trình thuê tàu chợ</p>
+                          <p>
+                            + Bước 1: Chủ hàng thông qua những người môi giới và
+                            nhờ họ tìm tàu hỏi tàu đề vận chuyển các hàng hoá
+                            cho mình.
+                          </p>
+                          <p>
+                            + Bước 2: Người môi giới chào tàu và hỏi tàu bằng
+                            việc đi gửi giấy lưu cước tàu chợ
+                          </p>
+                          <p>
+                            Giấy lưu cước thường đã được in sẵn thành mẫu và có
+                            các thông tin cần thiết để người ta có thể điền vào
+                            khi sử dụng .Chủ hàng có thể lưu cước cho cả một
+                            quý, cả một năm bằng một hợp đồng lưu cuớc ký kết
+                            với hãng tàu.
+                          </p>
+                          <p>
+                            + Bước 3: Người môi giới với chủ tàu sẽ thoả thuận
+                            một số các điều khoản chủ yếu trong quá trình xếp dỡ
+                            và vận chuyển hàng hóa.
+                          </p>
+                          <p>
+                            + Bước 4: Người môi giới sẽ phải thông báo cho chủ
+                            hàng hóa các kết quả lưu cước với chủ tàu.
+                          </p>
+                          <p>
+                            + Bước 5: Chủ hàng hóa đón lịch tàu để vận chuyển
+                            hàng hoá ra ngoài cảng giao cho tàu.<br />
+                            + Bước 6: Sau khi hàng hoá đã được xếp lên trên tàu,
+                            chủ tàu hay là người đại diện của chủ tàu sẽ cấp cho
+                            chủ hàng hóa một bộ vận đơn vận chuyển hàng hóa được
+                            ký dấu .
+                          </p>
+                          <p><strong>1.3. Vận đơn đường biển</strong></p>
+                          <p>
+                            Đây là một loại chứng từ chuyên chở hàng hoá bằng
+                            đường biển do người chuyên chở hay đại diện của
+                            người chuyên chở phát hành cho người gửi hàng sau
+                            khi hàng hoá đã được xếp lên trên tàu hay sau khi đã
+                            nhận hàng hóa để xếp lên tàu.
+                          </p>
+                          <p>
+                            <strong>a.Tác dụng của vận đơn đường biển</strong>
+                          </p>
+                          <p>
+                            – Là cơ sở pháp lý điều chỉnh mối quan hệ giữa người
+                            xếp hàng, nhận hàng và người chuyên chở.
+                          </p>
+                          <p>
+                            – Là căn cứ để kê khai hải quan và làm các thủ tục
+                            xuất nhập khẩu hàng hoá.
+                          </p>
+                          <p>
+                            – Là căn cứ để xác nhận hàng hóa và xác định số
+                            lượng hàng hoá mà người bán gửi cho người mua và dựa
+                            vào đó để ghi các sổ sách, thống kê, theo dõi đã
+                            hoặc không hoàn thành trách nhiệm như quy định trong
+                            bản hợp đồng mua bán ngoại thương .
+                          </p>
+                          <p>
+                            – Vận đơn kết hợpcùng các chứng từ khác của hàng hoá
+                            để lập thành bộ chứng từ thanh toán tiền hàng.
+                          </p>
+                          <p>
+                            – Là chứng từ quan trọng trong một bộ chứng từ khiếu
+                            nại về người bảo hiểm, hay những người khác có liên
+                            quan.<br />
+                            – Sử dụng làm chứng từ để cầm cố, mua bán, chuyển
+                            nhượng hàng hoá ghi trên vận đơn…<br />
+                            <strong>b. Phân loại các vận đơn</strong>
+                          </p>
+                          <p>
+                            Vận đơn đường biển rất đa dạng và phong phú, nó được
+                            sử dụng vào các công việc khác nhau tuỳ theo các nội
+                            dung thể hiện ở trên vận đơn. Theo Bộ luật hàng hải
+                            Việt Nam thì vận đơn được ký phát dưới 3 dạng là:
+                            vận đơn đích danh, vận đơn theo lệnh và vận đơn xuất
+                            trình.
+                          </p>
+                          <p>
+                            <strong
+                              >c. Những lưu ý khi sử dụng vận đơn đường
+                              biển</strong
+                            >
+                          </p>
+                          <p>
+                            Vận đơn đường biển là một chứng từ rất quan trọng
+                            trong quá trình giao nhận vận chuyển hay bảo hiểm,
+                            thanh toán và khiếu nại (nếu có). Vì vậy khi lập và
+                            sử dụng vận đơn các bạn cần lưu ý những điểm sau
+                            đây:
+                          </p>
+                          <p>
+                            Thứ nhất, vận đơn đường biển thường có dẫn chiếu một
+                            số về công ước quốc tế phổ biến như Hague Rules,
+                            Hague Visby Rules hay Hamburge Rules. Ngược lại,
+                            trên thế giới không có một công ước nào có thể điều
+                            chỉnh vận đơn thứ cấp.
+                          </p>
+                          <p>
+                            Thứ hai, vận đơn chỉ quy định các quyền và nghĩa vụ
+                            người&nbsp;<strong>Vận tải biển</strong>&nbsp;liên
+                            quan tới các việc bốc xếp hay chuyên chở, dỡ hàng và
+                            trả hàng phát sinh từ các hợp đồng thuê tàu. Ngược
+                            lại vận đơn thứ cấp còn chứa đựng những quy định
+                            pháp lý về việc chuyên chở bằng vận tải đường biển,
+                            đường sông và đường sắt. Vì vậy, không gian pháp lý
+                            của vận đơn thứ cấp khá rộng hơn vận đơn đường biển.
+                          </p>
+                          <p>
+                            Thứ ba, trong các vận đơn thứ cấp thường ghi các địa
+                            điểm giao nhận hàng để chở và các địa điểm trả hàng
+                            chứ không phải đơn thuần là cảng bốc hàng và cảng dỡ
+                            hàng.
+                          </p>
+                          <p>
+                            Thứ tư, vận đơn đường biển bao giờ cũng có ghi rõ:
+                            đã bốc hàng lên tàu hoặc đã nhận để bốc lên tàu
+                            .Ngược lại, vận đơn thứ cấp thường ghi: nhận để vận
+                            chuyển vì có thể chở bằng con đường biển, đường
+                            sông, đường bộ…
+                          </p>
+                          <p>
+                            Thứ năm, trong vận đơn đường biển, người gửi hàng
+                            gọi với cái tên shipper còn trong vận đơn thứ cấp,
+                            người gửi hàng gọi là congignor. Trong vận đơn đường
+                            biển luôn ghi người nhận hàng hoặc đích danh hoặc
+                            theo lệnh nhưng trong vận đơn thứ cấp luôn được ghi
+                            là: hàng được giao nhận theo lệnh
+                          </p>
+                          <p>
+                            Thứ sáu, vận đơn đường biển luôn có một chức năng là
+                            chứng từ nhận được quyền định đoạt hàng hoá nhưng
+                            với vận đơn thứ cấp, tính chất này có thêm hay không
+                            là do hai bên thoả thuận khi phát hành.
+                          </p>
+                          <p>
+                            Thứ bảy, người chuyên chở đường biển không phải chịu
+                            trách nhiệm về hàng hóa đến chậm nhưng người giao
+                            nhận hàng hóa lại phải chịu trách nhiệm về việc hàng
+                            hóa đến chậm .Có khi họ sẽ phải đền
+                            &nbsp;&nbsp;&nbsp;&nbsp; gấp đôi số tiền cước cho
+                            những thiệt hại do giao hàng tới chậm.
+                          </p>
+                          <p>
+                            Thứ tám, thời hiệu khiếu nại trong vận đơn đường
+                            biển thường là 01 năm, trong khi đó ở vận đơn thứ
+                            cấp thì chỉ khoảng 09 tháng.
+                          </p>
+                          <p>
+                            Thứ chín, vận đơn đường biển chỉ cần 01 con dấu và
+                            01 chữ ký vì nó chỉ được cấp sau khi hàng hóa đã
+                            được bốc lên tàu. Trong khi , vận đơn thứ cấp do
+                            được phát hành khi nhận hàng để chở nên phải có thêm
+                            01 con dấu và 01 chữ ký nữa để xác nhận rằng hàng
+                            hóa đã được bốc lên tàu (chú ý ngày cấp vận đơn thứ
+                            cấp và ngày bốc hàng có thể sẽ khác nhau).
+                          </p>
+                          <p>
+                            Tuy nhiên , sự phân biệt giữa 2 loại vận đơn này chỉ
+                            đánh giá là tương đối. Ðiều quan trọng là khi có một
+                            vận đơn trong tay , bạn phải xem xét xem nó thuộc
+                            loại gì và ai là người phát hành để khi có tổn thất
+                            có thể giải quyết kịp thời và đúng đối tượng.
+                          </p>
+                          <p>
+                            <strong>d. Giấy gửi hàng theo đường biển</strong>
+                          </p>
+                          <p>
+                            Vận đơn là một trong những chứng từ rất quan trọng
+                            nhất của việc mua bán quốc tế khi hàng hoá được vận
+                            chuyển bằng vận tải đường biển. Tuy vậy,&nbsp; vận
+                            đơn cũng nhiều nhược điểm như sau :
+                          </p>
+                          <p>
+                            Thứ nhất, khi hàng hoá đã cập cảng và thực hiện dỡ
+                            hàng nhưng người nhận không có vận đơn để nhận hàng
+                            vì thời gian hành trình của hàng hoá ở trên biển
+                            ngắn hơn thời gian gửi bill từ cảng xếp hàng tới
+                            cảng dỡ hàng.<br />
+                            Thứ hai, biên lai không thích hợp với việc áp dụng
+                            các phương tiện truyền số liệu hiện đại tự động
+                            (fax, teleax…) vì vậy, việc sử dụng biên lai trong
+                            thanh toán và nhận hàng…. đòi hỏi phải có bộ chứng
+                            từ gốc.<br />
+                            Thứ ba, việc in ấn biên lai đòi hỏi rất nhiều công
+                            sức và tốn kém bởi chữ in ở mặt sau của biên lai
+                            thường rất nhỏ, nó chỉ khoảng 0,3mm để chống làm
+                            giả.<br />
+                            Thứ tư, việc sử dụng biên lai có thể sẽ gặp những
+                            rủi ro trong việc giao nhận hàng hoá (nếu đơn vị nào
+                            bị mất cắp) vì biên lai là những chứng từ sở hữu
+                            hàng hoá….
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="w-100 clearfix">
+                      <div class="w-100 clear-fix">
+                        <form
+                          method="post"
+                          action="/posts/khai-quat-ve-van-tai-duong-bien/comments"
+                          id="article_comments"
+                          accept-charset="UTF-8">
+                          <input
+                            name="FormType"
+                            type="hidden"
+                            value="article_comments" />
+                          <input name="utf8" type="hidden" value="true" />
+
+                          <div class="w-100 clear-fix clearfix">
+                            <div class="form-coment">
+                              <div class="margin-top-0 margin-bottom-20 w-100">
+                                <h5 class="title-form-coment">
+                                  Viết bình luận:
+                                </h5>
+                              </div>
+                              <div class="row">
+                                <div
+                                  class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                                  <fieldset class="form-group padding-0">
+                                    <input
+                                      placeholder="Họ tên"
+                                      type="text"
+                                      class="form-control form-control-lg"
+                                      value=""
+                                      id="full-name"
+                                      name="Author"
+                                      required="" />
+                                  </fieldset>
+                                </div>
+                                <div
+                                  class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                                  <fieldset class="form-group padding-0">
+                                    <input
+                                      placeholder="Email"
+                                      pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,63}$"
+                                      type="email"
+                                      class="form-control form-control-lg"
+                                      value=""
+                                      name="Email"
+                                      required="" />
+                                  </fieldset>
+                                </div>
+                                <fieldset
+                                  class="form-group padding-right-15 padding-left-15 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                  <textarea
+                                    placeholder="Nội dung"
+                                    class="form-control form-control-lg"
+                                    id="comment"
+                                    name="Body"
+                                    rows="6"
+                                    required=""></textarea>
+                                </fieldset>
+                                <div
+                                  class="margin-bottom-fix margin-bottom-50-article clearfix padding-right-15 padding-left-15">
+                                  <button
+                                    type="submit"
+                                    class="btn btn-primary button_45">
+                                    Gửi bình luận
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- End form mail -->
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+
+                    <div class="blog-related clearfix">
+                      <div class="title-related clearfix">
+                        <a href="news.html" title="Tin bài liên quan"
+                          >Tin bài liên quan</a
+                        >
+                      </div>
+
+                      <div class="list_blog clearfix">
+                        <svg
+                          width="12"
+                          height="12"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 448 512">
+                          <path
+                            d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34zm192-34l-136-136c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l96.4 96.4-96.4 96.4c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l136-136c9.4-9.2 9.4-24.4 0-33.8z"></path>
+                        </svg>
+                        <a
+                          class="blog-title"
+                          href="tai-sao-noi-mien-phi-van-chuyen-la-yeu-to-canh-tranh-trong-thoi-dai-cong-nghe.html"
+                          title="Tại sao nói miễn phí vận chuyển là yếu tố cạnh tranh trong thời đại công nghệ?">
+                          Tại sao nói miễn phí vận chuyển là yếu tố cạnh tranh
+                          trong thời đại công nghệ?
+                        </a>
+                      </div>
+
+                      <div class="list_blog clearfix">
+                        <svg
+                          width="12"
+                          height="12"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 448 512">
+                          <path
+                            d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34zm192-34l-136-136c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l96.4 96.4-96.4 96.4c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l136-136c9.4-9.2 9.4-24.4 0-33.8z"></path>
+                        </svg>
+                        <a
+                          class="blog-title"
+                          href="danh-gia-va-lua-chon-nha-van-tai-mot-cach-hieu-qua.html"
+                          title="Đánh giá và lựa chọn nhà vận tải một cách hiệu quả">
+                          Đánh giá và lựa chọn nhà vận tải một cách hiệu quả
+                        </a>
+                      </div>
+
+                      <div class="list_blog clearfix">
+                        <svg
+                          width="12"
+                          height="12"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 448 512">
+                          <path
+                            d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34zm192-34l-136-136c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l96.4 96.4-96.4 96.4c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l136-136c9.4-9.2 9.4-24.4 0-33.8z"></path>
+                        </svg>
+                        <a
+                          class="blog-title"
+                          href="7-kinh-nghiem-can-phai-biet-khi-can-van-chuyen-hang-hoa.html"
+                          title="7 kinh nghiệm cần phải biết khi cần vận chuyển hàng hóa">
+                          7 kinh nghiệm cần phải biết khi cần vận chuyển hàng
+                          hóa
+                        </a>
+                      </div>
+
+                      <div class="list_blog clearfix">
+                        <svg
+                          width="12"
+                          height="12"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 448 512">
+                          <path
+                            d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34zm192-34l-136-136c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l96.4 96.4-96.4 96.4c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l136-136c9.4-9.2 9.4-24.4 0-33.8z"></path>
+                        </svg>
+                        <a
+                          class="blog-title"
+                          href="bung-no-dich-vu-chuyen-phat-nhanh-quoc-te.html"
+                          title="Bùng nổ dịch vụ chuyển phát nhanh quốc tế">
+                          Bùng nổ dịch vụ chuyển phát nhanh quốc tế
+                        </a>
+                      </div>
+                    </div>
+                  </article>
+                </section>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="copyright">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                <div class="wsp">
+                  <span>© Bản quyền thuộc về <b>Awesome Team</b></span>
+                  <span>|</span>
+                  <span>Cung cấp bởi</span>
+                  <a href="https://www.sapo.vn" rel="nofollow" target="_blank"
+                    >Sapo</a
+                  >
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                <ul class="follow_option">
+                  <li>
+                    <a href="#" title="Facebook"
+                      ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 320 512">
+                        <path
+                          d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path></svg
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="#" title="Twitter"
+                      ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512">
+                        <path
+                          d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="#" title="Google"
+                      ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 488 512">
+                        <path
+                          d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"></path></svg
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="#" title="Instagram"
+                      ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 448 512">
+                        <path
+                          d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <a href="#" id="back-to-top" class="backtop" title="Lên đầu trang">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <path
+              d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z"></path>
+          </svg>
+        </a>
+      </footer>
+    </div>
+
+    <!-- jQuery (required before Bootstrap) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <!-- WOW JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <!-- Custom JS -->
+    <script src="./assets/js/main.js"></script>
+    <!-- Navigation JS -->
+    <script src="./assets/js/navigation.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Initialize WOW.js for animations
+        new WOW().init();
+
+        // Smooth scroll for links
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+          anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+
+            const targetId = this.getAttribute("href");
+            if (targetId === "#") return;
+
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+              window.scrollTo({
+                top: targetElement.offsetTop - 80,
+                behavior: "smooth",
+              });
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
