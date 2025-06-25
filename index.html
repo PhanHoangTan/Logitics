@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Logistics</title>
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAABILAAASCwAAAAAAAAAAAAAAAAAAAAAAAAAAAAC8sKr/mYBw/5mAcP+ZgHD/mYBw/5mAcP+ZgHD/mYBw/5mAcP+ZgHD/mYBw/7ywqv8AAAAAAAAAAAAAAAAAAAAAq5qR/9PCvP/p4N3/6eDd/+ng3f/p4N3/6eDd/+ng3f/p4N3/6eDd/9PCvP+rmpH/AAAAAAAAAAAAAAAAAAAAAKuakf/TwrzAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA00MK8/6uakf8AAAAAAAAAAAAAAAAAAAAAq5qR/9PCvP/p4N3/6eDd/+ng3f/p4N3/6eDd/+ng3f/p4N3/6eDd/9PCvP+rmpH/AAAAAAAAAAAAAAAAAAAAAKuakf/TwrzAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA00MK8/6uakf8AAAAAAAAAAAAAAAAAAAAAq5qR/9PCvP/p4N3/6eDd/+ng3f/p4N3/6eDd/+ng3f/p4N3/6eDd/9PCvP+rmpH/AAAAAAAAAAAAAAAAAAAAAKuakf/TwrzAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA00MK8/6uakf8AAAAAAAAAAAAAAAAAAAAAq5qR/9PCvP/p4N3/6eDd/+ng3f/p4N3/6eDd/+ng3f/p4N3/6eDd/9PCvP+rmpH/AAAAAAAAAAAAAAAAAAAAALywqv+ZgHD/mYBw/5mAcP+ZgHD/mYBw/5mAcP+ZgHD/mYBw/5mAcP+ZgHD/vLCq/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==">
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAABILAAASCwAAAAAAAAAAAAAAAAAAAAAAAAAAAAC8sKr/mYBw/5mAcP+ZgHD/mYBw/5mAcP+ZgHD/mYBw/5mAcP+ZgHD/mYBw/7ywqv8AAAAAAAAAAAAAAAAAAAAAq5qR/9PCvP/p4N3/6eDd/+ng3f/p4N3/6eDd/+ng3f/p4N3/6eDd/9PCvP+rmpH/AAAAAAAAAAAAAAAAAAAAAKuakf/TwrzAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA00MK8/6uakf8AAAAAAAAAAAAAAAAAAAAAq5qR/9PCvP/p4N3/6eDd/+ng3f/p4N3/6eDd/+ng3f/p4N3/6eDd/9PCvP+rmpH/AAAAAAAAAAAAAAAAAAAAAKuakf/TwrzAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA00MK8/6uakf8AAAAAAAAAAAAAAAAAAAAAq5qR/9PCvP/p4N3/6eDd/+ng3f/p4N3/6eDd/+ng3f/p4N3/6eDd/9PCvP+rmpH/AAAAAAAAAAAAAAAAAAAAALywqv+ZgHD/mYBw/5mAcP+ZgHD/mYBw/5mAcP+ZgHD/mYBw/5mAcP+ZgHD/vLCq/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==">
     <!-- Bootstrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
@@ -802,28 +802,6 @@
           }
         </style>
 
-        <script>
-          $(document).ready(function(){
-            /*Modal thông báo thành công*/
-            var test = $('.guilienhe_thanhcong').text();
-            if (test != '') {
-              $('.modal_sucsses').addClass('show');
-              $('.opacity_menu').addClass('open_opacity');
-              setTimeout(function(){
-                $('html,body').animate({
-                  scrollTop: $(".section_contact").offset().top + 100},
-                                   'fast');
-              },500);
-            }
-          });
-
-          var data = '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.904611732553!2d105.81388241542348!3d21.03650239288885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab1946cc7e23%3A0x87ab3917166a0cd5!2zQ8O0bmcgdHkgY-G7lSBwaOG6p24gY8O0bmcgbmdo4buHIFNBUE8!5e0!3m2!1svi!2s!4v1555900531747!5m2!1svi!2s" width="2000" height="735" style="border:0" allowfullscreen></iframe>';
-          var timer = undefined;
-          timer = setTimeout(() => {
-            $('.iFrameMap').html(data);
-            timer = undefined;
-          }, 3000)
-        </script>
       </section>
 
     </main>
@@ -876,6 +854,30 @@
     <script src="./assets/js/main.js"></script>
     <!-- Navigation JS -->
     <script src="./assets/js/navigation.js"></script>
+
+    <!-- Contact Form Script -->
+    <script>
+      $(document).ready(function(){
+        /*Modal thông báo thành công*/
+        var test = $('.guilienhe_thanhcong').text();
+        if (test != '') {
+          $('.modal_sucsses').addClass('show');
+          $('.opacity_menu').addClass('open_opacity');
+          setTimeout(function(){
+            $('html,body').animate({
+              scrollTop: $(".section_contact").offset().top + 100},
+                               'fast');
+          },500);
+        }
+      });
+
+      var data = '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.904611732553!2d105.81388241542348!3d21.03650239288885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab1946cc7e23%3A0x87ab3917166a0cd5!2zQ8O0bmcgdHkgY-G7lSBwaOG6p24gY8O0bmcgbmdo4buHIFNBUE8!5e0!3m2!1svi!2s!4v1555900531747!5m2!1svi!2s" width="2000" height="735" style="border:0" allowfullscreen></iframe>';
+      var timer = undefined;
+      timer = setTimeout(() => {
+        $('.iFrameMap').html(data);
+        timer = undefined;
+      }, 3000)
+    </script>
 
     <!-- Slider Initialization -->
     <script>
