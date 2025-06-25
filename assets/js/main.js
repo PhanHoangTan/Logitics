@@ -384,6 +384,21 @@ $(window).scroll(function () {
   // Remove all active classes first
   $(".header-nav .nav-item a").removeClass("active-scroll");
 
+  // Check if we're in the news section (section 7) and don't apply active class if so
+  const newsSection = $("#tin-tuc");
+  if (newsSection.length) {
+    const newsSectionTop = newsSection.offset().top - 100;
+    const newsSectionBottom = newsSectionTop + newsSection.height();
+
+    if (
+      $(window).scrollTop() >= newsSectionTop &&
+      $(window).scrollTop() < newsSectionBottom
+    ) {
+      // We're in the news section, don't apply any active class
+      return;
+    }
+  }
+
   // Add active class only to current section's nav item
   if (currentSection && navItems[currentSection]) {
     navItems[currentSection].addClass("active-scroll");
