@@ -76,7 +76,6 @@ ul.breadcrumb li a {
   font-weight: 700;
 }
 
-
 .blogpage {
   padding: 40px 0;
 }
@@ -93,26 +92,34 @@ ul.breadcrumb li a {
   padding-bottom: 40px !important;
 }
 
+/* Updated blog item styling to match section 7 in index.html */
 .blog_item {
   margin-bottom: 30px;
   overflow: hidden;
   background: #fff;
   border-radius: 5px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
 }
 
 .blog_item:hover {
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
   transform: translateY(-5px);
 }
 
 .blogwp {
   position: relative;
+  height: 100%;
+  overflow: hidden;
 }
 
 .blog-thumbnail {
   position: relative;
+  overflow: hidden;
+}
+
+.blog-thumbnail .thumb {
+  display: block;
   overflow: hidden;
 }
 
@@ -126,28 +133,39 @@ ul.breadcrumb li a {
   transform: scale(1.05);
 }
 
+/* Updated post-detail to match the diamond shape in section 7 */
 .post-detail {
   position: absolute;
-  left: 15px;
   top: 15px;
-  background: #ffd200;
-  border-radius: 4px;
-  padding: 8px 15px;
+  left: 15px;
+  background-color: #00aeef;
+  color: white;
   text-align: center;
-  line-height: 1.1;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+.date-blog,
+.month-blog {
+  display: block;
+  font-weight: bold;
+  line-height: 1.2;
+  text-align: center;
 }
 
 .date-blog {
-  display: block;
-  font-size: 18px;
-  font-weight: 700;
-  color: #333;
+  font-size: 20px;
 }
 
 .month-blog {
-  display: block;
-  font-size: 14px;
-  color: #333;
+  font-size: 16px;
 }
 
 .content_blog {
@@ -156,22 +174,27 @@ ul.breadcrumb li a {
 
 .content_blog h3 {
   margin-top: 0;
-  margin-bottom: 15px;
-  height: 42px;
-  overflow: hidden;
+  margin-bottom: 12px;
+  line-height: 1.4;
 }
 
 .content_blog h3 a {
   font-size: 18px;
-  font-weight: 600;
   color: #333;
   text-decoration: none;
   transition: color 0.3s ease;
   line-height: 1.3;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  max-height: 50px;
 }
 
 .content_blog h3 a:hover {
-  color: #ffd200;
+  color: #00aeef;
 }
 
 .summary_blog {
@@ -179,26 +202,37 @@ ul.breadcrumb li a {
   font-size: 14px;
   line-height: 1.5;
   margin-bottom: 15px;
-  height: 63px;
   overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  max-height: 63px;
 }
 
+/* Updated readmore styling for all pages */
 .readmore {
   display: inline-block;
-  color: #ffd200;
-  font-weight: 600;
+  color: #00aeef;
+  font-weight: 500;
+  font-size: 14px;
   text-decoration: none;
   transition: all 0.3s ease;
 }
 
 .readmore:hover {
-  color: #333;
+  color: #0077aa;
+  text-decoration: underline;
 }
 
+/* Hide SVG icons in readmore links */
 .readmore svg {
-  height: 12px;
-  margin-left: 5px;
-  fill: currentColor;
+  display: none !important;
+}
+
+/* Add the » symbol after readmore links if it doesn't already have it */
+.readmore:not(:contains("»")):after {
+  content: " »";
 }
 
 .pageinate-page-blog {
@@ -239,13 +273,13 @@ ul.breadcrumb li a {
 }
 
 .pagination .page-item.active a {
-  background: #ffd200;
-  color: #333;
+  background: #00aeef;
+  color: #fff;
 }
 
 .pagination .page-item:not(.disabled) a:hover {
-  background: #ffd200;
-  color: #333;
+  background: #00aeef;
+  color: #fff;
 }
 
 .pagination .page-item.disabled a {
@@ -313,11 +347,12 @@ ul.breadcrumb li a {
   }
 
   .post-detail {
-    padding: 5px 10px;
+    width: 50px;
+    height: 50px;
   }
 
   .date-blog {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   .month-blog {
