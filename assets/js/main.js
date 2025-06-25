@@ -346,62 +346,85 @@ $(window).scroll(function () {
   }
 
   // Add scroll spy functionality - handle menu active state when scrolling
-  const sections = [
-    "#section1",
-    "#section2",
-    "#section3",
-    "#section4",
-    "#section5",
-    "#section6",
-  ];
-  const navItems = {
-    "#section1": $(".header-nav .nav-item:nth-child(1) a"),
-    "#section2": $(".header-nav .nav-item:nth-child(2) a"),
-    "#section3": $(".header-nav .nav-item:nth-child(3) a"),
-    "#section4": $(".header-nav .nav-item:nth-child(4) a"),
-    "#section5": $(".header-nav .nav-item:nth-child(5) a"),
-    "#section6": $(".header-nav .nav-item:nth-child(6) a"),
-  };
+  // Check if this is the index page (only run scroll spy on index page)
+  if (
+    window.location.pathname.endsWith("index.html") ||
+    window.location.pathname.endsWith("/")
+  ) {
+    const sections = [
+      "#ve-chung-toi",
+      "#dich-vu",
+      "#van-chuyen",
+      "#thong-ke",
+      "#tin-tuc",
+      "#lien-he",
+    ];
+    const navItems = {
+      "#ve-chung-toi": $(".header-nav .nav-item:nth-child(1) a"),
+      "#dich-vu": $(".header-nav .nav-item:nth-child(2) a"),
+      "#van-chuyen": $(".header-nav .nav-item:nth-child(3) a"),
+      "#thong-ke": $(".header-nav .nav-item:nth-child(4) a"),
+      "#tin-tuc": $(".header-nav .nav-item:nth-child(5) a"),
+      "#lien-he": $(".header-nav .nav-item:nth-child(6) a"),
+    };
 
-  let currentSection = "";
+    let currentSection = "";
 
-  // Find which section is in view
-  sections.forEach((section) => {
-    const $section = $(section);
-    if ($section.length) {
-      const sectionTop = $section.offset().top - 100;
-      const sectionBottom = sectionTop + $section.height();
+    // Find which section is in view
+    sections.forEach((section) => {
+      const $section = $(section);
+      if ($section.length) {
+        const sectionTop = $section.offset().top - 100;
+        const sectionBottom = sectionTop + $section.height();
+
+        if (
+          $(window).scrollTop() >= sectionTop &&
+          $(window).scrollTop() < sectionBottom
+        ) {
+          currentSection = section;
+        }
+      }
+    });
+
+    // Remove all active classes first
+    $(".header-nav .nav-item a").removeClass("active-scroll");
+
+    // Check if we're in the news section (tin-tuc) and don't apply active class if so
+    const newsSection = $("#tin-tuc");
+    if (newsSection.length) {
+      const newsSectionTop = newsSection.offset().top - 100;
+      const newsSectionBottom = newsSectionTop + newsSection.height();
 
       if (
-        $(window).scrollTop() >= sectionTop &&
-        $(window).scrollTop() < sectionBottom
+        $(window).scrollTop() >= newsSectionTop &&
+        $(window).scrollTop() < newsSectionBottom
       ) {
-        currentSection = section;
+        // We're in the news section, don't apply any active class
+        return;
       }
     }
-  });
 
-  // Remove all active classes first
-  $(".header-nav .nav-item a").removeClass("active-scroll");
-
-  // Check if we're in the news section (section 7) and don't apply active class if so
-  const newsSection = $("#tin-tuc");
-  if (newsSection.length) {
-    const newsSectionTop = newsSection.offset().top - 100;
-    const newsSectionBottom = newsSectionTop + newsSection.height();
-
-    if (
-      $(window).scrollTop() >= newsSectionTop &&
-      $(window).scrollTop() < newsSectionBottom
-    ) {
-      // We're in the news section, don't apply any active class
-      return;
+    // Add active class only to current section's nav item
+    if (currentSection && navItems[currentSection]) {
+      navItems[currentSection].addClass("active-scroll");
     }
-  }
-
-  // Add active class only to current section's nav item
-  if (currentSection && navItems[currentSection]) {
-    navItems[currentSection].addClass("active-scroll");
+  } else {
+    // For other pages, highlight the appropriate nav item based on the current page
+    const currentPage = window.location.pathname;
+    if (
+      currentPage.includes("news.html") ||
+      currentPage.includes("tin-tuc-page-2.html")
+    ) {
+      // Remove active classes first
+      $(".header-nav .nav-item a").removeClass("active-scroll");
+      // Add active class to the News nav item (5th item)
+      $(".header-nav .nav-item:nth-child(5) a").addClass("active-scroll");
+    } else if (currentPage.includes("Price.html")) {
+      // Remove active classes first
+      $(".header-nav .nav-item a").removeClass("active-scroll");
+      // Add active class to the Price nav item (7th item)
+      $(".header-nav .nav-item:nth-child(7) a").addClass("active-scroll");
+    }
   }
 });
 
@@ -416,12 +439,25 @@ $(".header-nav .nav-item a").on("click", function (e) {
     e.preventDefault();
 
     const hash = this.hash;
+    const $target = $(hash);
 
-    $("html, body").animate(
-      {
-        scrollTop: $(hash).offset().top - 70,
-      },
-      800
-    );
+    // Check if the target element exists on the current page
+    if ($target.length) {
+      $("html, body").animate(
+        {
+          scrollTop: $target.offset().top - 70,
+        },
+        800
+      );
+    } else {
+      // If target doesn't exist on this page, it's likely on another page
+      // Check if the link has href attribute with the page name
+      const href = $(this).attr("href");
+      if (href && href.includes("#") && !href.startsWith("#")) {
+        // If href contains both a page name and a hash (e.g., "index.html#section")
+        // Just follow the link normally
+        window.location.href = href;
+      }
+    }
   }
 });
