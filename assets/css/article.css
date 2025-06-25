@@ -1,30 +1,103 @@
 /* Article Page Custom Styles */
 
 /* Comment form styles */
-.w-100.clear-fix h5 {
+.w-100.clear-fix h5,
+.title-form-coment {
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 20px;
 }
 
-.comment-form input.form-control,
-.comment-form textarea.form-control {
+input.form-control,
+textarea.form-control,
+.form-coment input.form-control,
+.form-coment textarea.form-control {
   border-radius: 4px;
-  background-color: #f5f9fa;
-  border: none;
+  background-color: #f9f9f9;
+  border: 1px solid #eeeeee;
   padding: 12px 15px;
   margin-bottom: 15px;
+  width: 100%;
+  font-size: 14px;
 }
 
-.comment-form button.btn-primary {
-  background-color: #20b2aa;
+.form-coment textarea.form-control {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.btn-primary,
+.button_45,
+.form-coment button.btn-primary,
+.form-coment button.button_45 {
+  background-color: #45b7af;
   border: none;
   padding: 10px 25px;
   border-radius: 4px;
   font-weight: 500;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.btn-primary:hover,
+.button_45:hover {
+  background-color: #3a9d96;
+}
+
+.form-coment {
+  padding: 20px 0;
+  margin-bottom: 30px;
+}
+
+.padding-0 {
+  padding: 0;
 }
 
 /* Related articles section */
+.blog-related {
+  margin-top: 40px;
+  padding-top: 30px;
+  border-top: 1px solid #eee;
+}
+
+.title-related {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.title-related a {
+  color: #333;
+  text-decoration: none;
+}
+
+.list_blog {
+  padding: 10px 0;
+  position: relative;
+}
+
+.list_blog svg {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
+  color: #45b7af;
+}
+
+.list_blog a.blog-title {
+  color: #333;
+  font-size: 15px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.list_blog a.blog-title:hover {
+  color: #45b7af;
+}
+
+/* Old styles preserved for compatibility */
 .tin-bai-lien-quan {
   margin-top: 40px;
   padding-top: 30px;
@@ -66,7 +139,7 @@
 }
 
 .tin-bai-lien-quan .article-item a:hover {
-  color: #20b2aa;
+  color: #45b7af;
 }
 
 .tin-bai-lien-quan .article-item a::before {
@@ -74,6 +147,6 @@
   position: absolute;
   left: 0;
   top: 0;
-  color: #20b2aa;
+  color: #45b7af;
   font-weight: bold;
 }

@@ -719,133 +719,67 @@
                     </div>
                     <div class="w-100 clearfix">
                       <div class="w-100 clear-fix">
-                        <div class="w-100 clear-fix clearfix">
-                          <div class="form-coment">
-                            <div class="margin-top-0 margin-bottom-20 w-100">
-                              <h5 class="title-form-coment">Viết bình luận:</h5>
+                        <h5>Viết bình luận:</h5>
+                        <form method="post" action="#" class="comment-form">
+                          <div class="row">
+                            <div class="col-md-6">
+                              <input
+                                type="text"
+                                name="Author"
+                                placeholder="Họ tên"
+                                class="form-control"
+                                required />
                             </div>
-                            <div class="row">
-                              <div
-                                class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
-                                <fieldset class="form-group padding-0">
-                                  <input
-                                    placeholder="Họ tên"
-                                    type="text"
-                                    class="form-control form-control-lg"
-                                    value=""
-                                    id="full-name"
-                                    name="Author"
-                                    required="" />
-                                </fieldset>
-                              </div>
-                              <div
-                                class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
-                                <fieldset class="form-group padding-0">
-                                  <input
-                                    placeholder="Email"
-                                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,63}$"
-                                    type="email"
-                                    class="form-control form-control-lg"
-                                    value=""
-                                    name="Email"
-                                    required="" />
-                                </fieldset>
-                              </div>
-                              <fieldset
-                                class="form-group padding-right-15 padding-left-15 col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <textarea
-                                  placeholder="Nội dung"
-                                  class="form-control form-control-lg"
-                                  id="comment"
-                                  name="Body"
-                                  rows="6"
-                                  required=""></textarea>
-                              </fieldset>
-                              <div
-                                class="margin-bottom-fix margin-bottom-50-article clearfix padding-right-15 padding-left-15">
-                                <button
-                                  type="submit"
-                                  class="btn btn-primary button_45">
-                                  Gửi bình luận
-                                </button>
-                              </div>
+                            <div class="col-md-6">
+                              <input
+                                type="email"
+                                name="Email"
+                                placeholder="Email"
+                                class="form-control"
+                                required />
+                            </div>
+                            <div class="col-md-12">
+                              <textarea
+                                name="Body"
+                                placeholder="Nội dung"
+                                class="form-control"
+                                rows="6"
+                                required></textarea>
+                            </div>
+                            <div class="col-md-12 mt-3">
+                              <button type="submit" class="btn btn-primary">
+                                Gửi bình luận
+                              </button>
                             </div>
                           </div>
-                          <!-- End form mail -->
-                        </div>
+                        </form>
                       </div>
                     </div>
-                    <div class="blog-related clearfix">
-                      <div class="title-related clearfix">
-                        <a href="news.html" title="Tin bài liên quan"
-                          >Tin bài liên quan</a
-                        >
-                      </div>
-                      <div class="list_blog clearfix">
-                        <svg
-                          width="12"
-                          height="12"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 448 512">
-                          <path
-                            d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34zm192-34l-136-136c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l96.4 96.4-96.4 96.4c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l136-136c9.4-9.2 9.4-24.4 0-33.8z"></path>
-                        </svg>
-                        <a
-                          class="blog-title"
-                          href="tai-sao-noi-mien-phi-van-chuyen-la-yeu-to-canh-tranh-trong-thoi-dai-cong-nghe.html"
-                          title="Tại sao nói miễn phí vận chuyển là yếu tố cạnh tranh trong thời đại công nghệ?">
-                          Tại sao nói miễn phí vận chuyển là yếu tố cạnh tranh
-                          trong thời đại công nghệ?
-                        </a>
-                      </div>
-                      <div class="list_blog clearfix">
-                        <svg
-                          width="12"
-                          height="12"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 448 512">
-                          <path
-                            d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34zm192-34l-136-136c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l96.4 96.4-96.4 96.4c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l136-136c9.4-9.2 9.4-24.4 0-33.8z"></path>
-                        </svg>
-                        <a
-                          class="blog-title"
-                          href="danh-gia-va-lua-chon-nha-van-tai-mot-cach-hieu-qua.html"
-                          title="Đánh giá và lựa chọn nhà vận tải một cách hiệu quả">
-                          Đánh giá và lựa chọn nhà vận tải một cách hiệu quả
-                        </a>
-                      </div>
-                      <div class="list_blog clearfix">
-                        <svg
-                          width="12"
-                          height="12"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 448 512">
-                          <path
-                            d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34zm192-34l-136-136c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l96.4 96.4-96.4 96.4c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l136-136c9.4-9.2 9.4-24.4 0-33.8z"></path>
-                        </svg>
-                        <a
-                          class="blog-title"
-                          href="#"
-                          title="Bùng nổ dịch vụ chuyển phát nhanh quốc tế">
-                          Bùng nổ dịch vụ chuyển phát nhanh quốc tế
-                        </a>
-                      </div>
-                      <div class="list_blog clearfix">
-                        <svg
-                          width="12"
-                          height="12"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 448 512">
-                          <path
-                            d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34zm192-34l-136-136c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l96.4 96.4-96.4 96.4c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l136-136c9.4-9.2 9.4-24.4 0-33.8z"></path>
-                        </svg>
-                        <a
-                          class="blog-title"
-                          href="#"
-                          title="Vận tải đa phương thức là gì">
-                          Vận tải đa phương thức là gì
-                        </a>
-                      </div>
+                    <div class="tin-bai-lien-quan">
+                      <h3>Tin bài liên quan</h3>
+                      <ul class="article-list">
+                        <li class="article-item">
+                          <a
+                            href="tai-sao-noi-mien-phi-van-chuyen-la-yeu-to-canh-tranh-trong-thoi-dai-cong-nghe.html">
+                            Tại sao nói miễn phí vận chuyển là yếu tố cạnh tranh
+                            trong thời đại công nghệ?
+                          </a>
+                        </li>
+                        <li class="article-item">
+                          <a
+                            href="danh-gia-va-lua-chon-nha-van-tai-mot-cach-hieu-qua.html">
+                            Đánh giá và lựa chọn nhà vận tải một cách hiệu quả
+                          </a>
+                        </li>
+                        <li class="article-item">
+                          <a href="#">
+                            Bùng nổ dịch vụ chuyển phát nhanh quốc tế
+                          </a>
+                        </li>
+                        <li class="article-item">
+                          <a href="#"> Vận tải đa phương thức là gì </a>
+                        </li>
+                      </ul>
                     </div>
                   </article>
                 </section>
