@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Dịch vụ chuyển phát nhanh và chuyển phát thường có điểm gì khác biệt? -
+      Logistics
+    </title>
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAABILAAASCwAAAAAAAAAAAAAAAAAAAAAAAAAAAAC8sKr/mYBw/5mAcP+ZgHD/mYBw/5mAcP+ZgHD/mYBw/5mAcP+ZgHD/mYBw/7ywqv8AAAAAAAAAAAAAAAAAAAAAq5qR/9PCvP/p4N3/6eDd/+ng3f/p4N3/6eDd/+ng3f/p4N3/6eDd/9PCvP+rmpH/AAAAAAAAAAAAAAAAAAAAAKuakf/TwrzAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA00MK8/6uakf8AAAAAAAAAAAAAAAAAAAAAq5qR/9PCvP/p4N3/6eDd/+ng3f/p4N3/6eDd/+ng3f/p4N3/6eDd/9PCvP+rmpH/AAAAAAAAAAAAAAAAAAAAAKuakf/TwrzAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA00MK8/6uakf8AAAAAAAAAAAAAAAAAAAAAq5qR/9PCvP/p4N3/6eDd/+ng3f/p4N3/6eDd/+ng3f/p4N3/6eDd/9PCvP+rmpH/AAAAAAAAAAAAAAAAAAAAALywqv+ZgHD/mYBw/5mAcP+ZgHD/mYBw/5mAcP+ZgHD/mYBw/5mAcP+ZgHD/vLCq/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet" />
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- News CSS -->
+    <link rel="stylesheet" href="assets/css/news.css" />
+    <!-- Article CSS -->
+    <link rel="stylesheet" href="assets/css/article.css" />
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <style>
+      /* Additional style to fix page 2 readmore links */
+      .readmore svg {
+        display: none !important;
+      }
+
+      .readmore:after {
+        content: " »";
+      }
+    </style>
+  </head>
+  <body>
+    <div id="menu-overlay" class=""></div>
+    <div class="menu-overlay"></div>
+    <div class="main-wrapper">
+      <header class="header header-fixed sticky">
+        <div class="mid-header">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-3 col-12 header_top">
+                <div class="logo_center">
+                  <div class="logo">
+                    <a href="index.html" class="logo-wrapper">
+                      <img
+                        src="//bizweb.dktcdn.net/100/374/039/themes/894812/assets/logo.png?1676967946202"
+                        alt="Logistics Logo" />
+                    </a>
+                  </div>
+                </div>
+                <div class="menu-bar-mobile menu-bar-h nav-mobile-button">
+                  <div class="menu-bar">
+                    <svg
+                      class="category"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 448 512">
+                      <path
+                        d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"></path>
+                    </svg>
+                    <svg
+                      class="closes"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 352 512">
+                      <path
+                        d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-9 col-12 header_bottom">
+                <div class="header_menu clearfix">
+                  <div class="wrap_main menu_mobile">
+                    <nav class="header-nav">
+                      <ul class="item_big heavnal">
+                        <li class="nav-item">
+                          <a
+                            class="a-img"
+                            href="index.html#ve-chung-toi"
+                            title="Về chúng tôi">
+                            <span>Về chúng tôi</span>
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a
+                            class="a-img"
+                            href="index.html#dich-vu"
+                            title="Dịch vụ">
+                            <span>Dịch vụ</span>
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a
+                            class="a-img"
+                            href="index.html#van-chuyen"
+                            title="Vận chuyển">
+                            <span>Vận chuyển</span>
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a
+                            class="a-img"
+                            href="index.html#thong-ke"
+                            title="Thống kê">
+                            <span>Thống kê</span>
+                          </a>
+                        </li>
+                        <li class="nav-item active">
+                          <a class="a-img" href="news.html" title="Tin tức">
+                            <span>Tin tức</span>
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a
+                            class="a-img"
+                            href="index.html#lien-he"
+                            title="Liên hệ">
+                            <span>Liên hệ</span>
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="a-img" href="Price.html" title="Báo giá">
+                            <span>Báo giá</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </nav>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main>
+        <div id="menu-overlay" class=""></div>
+
+        <div class="breadcrumb_background clearfix">
+          <div class="title_full clearfix">
+            <div class="container a-center">
+              <h1 class="title_page">
+                Dịch vụ chuyển phát nhanh và chuyển phát thường có điểm gì khác
+                biệt?
+              </h1>
+            </div>
+          </div>
+          <section class="bread-crumb">
+            <span class="crumb-border"></span>
+            <div class="container">
+              <div class="rows">
+                <div class="col-xs-12 a-left">
+                  <ul class="breadcrumb">
+                    <li class="home">
+                      <a href="index.html"><span>Trang chủ</span></a>
+                      <span class="mr_lr">&nbsp;/&nbsp;</span>
+                    </li>
+                    <li>
+                      <a href="news.html"><span>Tin tức</span></a>
+                      <span class="mr_lr">&nbsp;/&nbsp;</span>
+                    </li>
+                    <li>
+                      <strong
+                        ><span
+                          >Dịch vụ chuyển phát nhanh và chuyển phát thường có
+                          điểm gì khác biệt?</span
+                        ></strong
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <section class="blogpage article_bg clearfix">
+          <div
+            class="container article-wraper"
+            itemscope=""
+            itemtype="https://schema.org/Article">
+            <meta
+              itemprop="mainEntityOfPage"
+              content="/dich-vu-chuyen-phat-nhanh-va-chuyen-phat-thuong-co-diem-gi-khac-biet" />
+            <meta itemprop="description" content="" />
+            <meta itemprop="author" content="Nguyễn Tuấn Minh" />
+            <meta
+              itemprop="headline"
+              content="Dịch vụ chuyển phát nhanh và chuyển phát thường có điểm gì khác biệt?" />
+            <meta
+              itemprop="image"
+              content="https:https://bizweb.dktcdn.net/100/374/039/articles/content.jpg?v=1577154219780" />
+            <meta itemprop="datePublished" content="24-12-2019" />
+            <meta itemprop="dateModified" content="24-12-2019" />
+            <div
+              itemprop="publisher"
+              itemscope=""
+              itemtype="https://schema.org/Organization">
+              <meta itemprop="name" content="Template Logistics" />
+            </div>
+            <div
+              class="wrap_background_aside padding-top-30 padding-bottom-40 clearfix">
+              <div class="row">
+                <section class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                  <article class="article-main clearfix">
+                    <div class="article-details clearfix">
+                      <span class="post-time"> 24/12/2019 </span>
+                      <h1 class="article-title clearfix">
+                        Dịch vụ chuyển phát nhanh và chuyển phát thường có điểm
+                        gì khác biệt?
+                      </h1>
+                      <div class="article-content clearfix">
+                        <div class="rte">
+                          <header>
+                            <h2>
+                              Dịch vụ chuyển phát nhanh và chuyển phát thường có
+                              điểm gì khác biệt?
+                            </h2>
+                          </header>
+
+                          <p>
+                            Dịch vụ chuyển phát nhanh hay chuyển phát thường
+                            cũng đều là những hình thức vận chuyển được ưa
+                            chuộng và không thể thiếu đối với những doanh nghiệp
+                            kinh doanh trong lĩnh vực thương mại điện từ. Mỗi
+                            dịch vụ lại có những cách thức hoạt động khác nhau,
+                            do đó bạn nên biết được nhu cầu vận chuyển của mình
+                            là gì? mà lựa chọn cho phù hợp. Bài viết dưới đây là
+                            những điểm khác biệt giữa dịch vụ chuyển phát nhanh
+                            và chuyển phát thường để bạn tham khảo. Cùng tìm
+                            hiểu nhé!
+                          </p>
+
+                          <h2>
+                            <strong
+                              ><em
+                                >1. Tìm hiểu chuyển phát nhanh là gì? Chuyển
+                                phát thường là gì?</em
+                              ></strong
+                            >
+                          </h2>
+
+                          <h3>a. Khái niệm chuyển phát nhanh</h3>
+
+                          <p>
+                            + Dịch vụ vận chuyển hàng hóa có mặt trên thị trường
+                            từ rất nhiều năm trước đây. Ban đầu, khi sự đòi hỏi
+                            của khách hàng không quá khắt khe như hiện nay dịch
+                            vụ chuyển phát thường vẫn là lựa chọn phổ biến nhất.
+                            Nhưng hiện nay, với sự tiến bộ của các hình thức di
+                            chuyển tối ưu hơn thì dịch vụ chuyển phát nhanh ra
+                            đời nhiều hơn và chiếm thế hơn hẳn dịch vụ chuyển
+                            phát thường.
+                          </p>
+
+                          <p style="text-align: center">
+                            <img
+                              alt=""
+                              height="399"
+                              src="https://assets.movecrop.com/uploads/cmsfile/Tintuc/chuyen-phat-nhanh-hay-giao-hang-nhanh-la-hinh-thuc-chuyen-phat-thong-thuong-tuy-nhien-co-su-bao-dam.jpg"
+                              width="600" />
+                          </p>
+
+                          <p>
+                            <strong
+                              ><em
+                                >Chuyển phát nhanh hay giao hàng nhanh là hình
+                                thức chuyển phát thông thường tuy nhiên có sự
+                                bảo đảm về thời gian vận chuyển đến tay người
+                                nhận.</em
+                              ></strong
+                            >
+                          </p>
+
+                          <p>
+                            + Thông thường, trong các bảng thông tin về chuyển
+                            phát nhanh sẽ có kèm theo "thời gian cam kết". Thuật
+                            ngữ trong ngành gọi là "thời gian toàn trình", đây
+                            là khoảng thời gian tính từ khi văn bản, bưu kiện,
+                            gói hàng hóa được nhận gửi đến khi được phát đến địa
+                            chỉ giao nhận.
+                          </p>
+
+                          <p>
+                            + Có thể hiểu đơn giản, chuyển phát nhanh hay giao
+                            hàng nhanh là hình thức chuyển phát thông thường tuy
+                            nhiên có sự bảo đảm về thời gian vận chuyển đến tay
+                            người nhận.
+                          </p>
+
+                          <p>
+                            + Các phương tiện hỗ trợ cho việc chuyển phát nhanh
+                            chủ yếu là xe máy, ô tô hoặc máy bay. Xe máy thường
+                            được dùng cho chuyển phát nhanh nội thị, ô tô nhỏ là
+                            xe thư báo - dùng kết hợp với xe máy trong trường
+                            hợp hàng hóa nhiều và nặng.
+                          </p>
+
+                          <h3>b. Tìm hiểu thông tin về chuyển phát thường</h3>
+
+                          <p>
+                            Đối với hàng hóa, bưu phẩm có khối lượng nặng, việc
+                            sử dụng chuyển phát nhanh có thể gây ra nhiều tốn
+                            kém. Khi đó, chuyển phát thường sẽ là lựa chọn cho
+                            bạn.
+                          </p>
+
+                          <p>
+                            Thông thường, các loại hàng hóa sử dụng phương thức
+                            chuyển phát thường sẽ có thời gian giao hàng chậm
+                            hơn chuyển phát nhanh từ 2 đến 3 ngày, tùy vào vùng
+                            trả hàng.
+                          </p>
+
+                          <p style="text-align: center">
+                            <img
+                              alt=""
+                              height="373"
+                              src="https://assets.movecrop.com/uploads/cmsfile/Tintuc/doi-voi-hnag-hoa-buu-pham-co-khoi-luong-nang.jpg"
+                              width="600" />
+                          </p>
+
+                          <p>
+                            Khi lựa chọn dịch vụ chuyển phát thường bạn nên chắc
+                            chắn rằng nhu cầu của khách hàng. Nếu như khách hàng
+                            không có nhu cầu nhận hàng hóa với thời gian chậm
+                            hoặc chưa cần gấp thì bạn có thể lựa chọn dịch vụ
+                            này.
+                          </p>
+
+                          <p>
+                            Thời gian giao hàng chậm đương nhiên chi phí mà
+                            doanh nghiệp bạn phải trả sẽ ít hơn so với những
+                            dịch vụ chuyển phát hiện đại và yêu cầu cao về yếu
+                            tố thời gian.
+                          </p>
+
+                          <h2>
+                            <strong
+                              ><em
+                                >2. Dịch vụ chuyển phát nhanh và chuyển phát
+                                thường có điểm gì khác biệt?</em
+                              ></strong
+                            >
+                          </h2>
+
+                          <p>
+                            Đều có điểm chung là những dịch vụ vận chuyển và với
+                            mục đích là đáp ứng được nhu cầu vận chuyển của
+                            khách hàng khi muốn gửi hàng hóa đến tận tay khách
+                            hàng. Thế nhưng giữa hai dịch vụ này cũng có những
+                            điểm khác biệt như:
+                          </p>
+
+                          <h3>a. Sự khác biệt về cước phí</h3>
+
+                          <p>
+                            + Cước phí luôn là điều mà khách hàng sử dụng dịch
+                            vụ quan tâm. Đương nhiên nếu lựa chọn một dịch vụ có
+                            nhiều ưu điểm nổi trội về yếu tố tốc độ thì chi phí
+                            doanh nghiệp bỏ ra sẽ cao hơn.
+                          </p>
+
+                          <p>
+                            + Cước phí của dịch vụ chuyển phát nhanh sẽ luôn cao
+                            hơn so với hình thức chuyển phát thường. Mức giá
+                            chuyển phát nhanh có thể cao gấp đôi so với hình
+                            thức chuyển phát thường, việc tính toán giá cước
+                            được dựa trên nhiều yếu tố như số lượng đơn hàng,
+                            trọng lượng đơn hàng, loại hàng, địa chỉ nơi nhận.
+                          </p>
+
+                          <p style="text-align: center">
+                            <img
+                              alt=""
+                              height="375"
+                              src="https://assets.movecrop.com/uploads/cmsfile/Tintuc/cuoc-phi-cua-dich-vu-chuyen-phat-nhanh.jpg"
+                              width="600" />
+                          </p>
+
+                          <p>
+                            <strong
+                              ><em
+                                >Cước phí của dịch vụ chuyển phát nhanh sẽ luôn
+                                cao hơn so với hình thức chuyển phát thường.</em
+                              ></strong
+                            >
+                          </p>
+
+                          <p>
+                            + Tuy nhiên, nếu đánh giá dựa trên những lợi ích
+                            tổng thể về mặt kinh tế thì chuyển phát nhanh sẽ
+                            mang đến lợi ích kinh tế cho khách hàng. Khách hàng
+                            sẽ tiết kiệm thời gian vàng bạc của mình để dành cho
+                            những công việc kiếm ra tiền nhiều hơn là việc đến
+                            và đợi tại bưu điện.
+                          </p>
+
+                          <p>
+                            + Bạn sẽ nhận được giá trị hợp đồng cao hơn từ đối
+                            tác nếu hàng hóa thư từ được chuyển đến tay đối tác
+                            trong thời gian chính xác thì việc bỏ ra cước phí
+                            cao khi sử dụng dịch vụ cũng rất thỏa đáng.
+                          </p>
+
+                          <p>
+                            + Do đó, đánh giá về mặt tổng thể thì dịch vụ vụ
+                            chuyển phát nhanh không thực sự "đắt" hơn dịch vụ
+                            chuyển phát thường.
+                          </p>
+
+                          <h3>b. Sự khác biệt về thời gian di chuyển</h3>
+
+                          <p>
+                            Sở dĩ khách hàng thường chọn dịch vụ chuyển phát
+                            nhanh vì nó luôn luôn dẫn đầu về tốc độ di chuyển
+                            với tất cả các khâu từ nhận hàng, xử lý đơn hàng cho
+                            đến khâu vận chuyển và giao hàng tận nhà.
+                          </p>
+
+                          <p>
+                            Dịch vụ chuyển phát nhanh có thể giao hàng cho khách
+                            ngay trong ngày hoặc chậm nhất là 1 tuần làm việc
+                            tùy theo vùng địa lý và vị trí đơn gửi. Hiện nay nếu
+                            chuyển phát nhanh nội tỉnh, nội thành thì thời gian
+                            khoảng từ 4-5 tiếng. Chuyển phát nhanh nội địa có
+                            thể kéo dài từ 1 đến 3 ngày. Chuyển phát nhanh quốc
+                            tế thì thời gian giao động từ 3 ngày cho đến 2 tuần
+                            tùy vào quốc gia gửi đến.
+                          </p>
+
+                          <p style="text-align: center">
+                            <img
+                              alt=""
+                              src="https://assets.movecrop.com/uploads/cmsfile/Tintuc/su-khac-biet-lon-giua-dich-vu-chuyen-phat-nhanh.jpg"
+                              style="width: 600px; height: 400px" />
+                          </p>
+
+                          <p>
+                            <strong
+                              ><em
+                                >Sự khác biệt lớn giữa dịch vụ chuyển phát nhanh
+                                và dịch vụ chuyển phát thường là thời gian di
+                                chuyển.</em
+                              ></strong
+                            >
+                          </p>
+
+                          <p>
+                            Trong khi đó, dịch vụ chuyển phát thường có thời
+                            gian khá chậm. Bên cạnh đó, việc nhận hàng có thể
+                            còn phù thuộc vào phía bưu điện của nơi nhận. Hàng
+                            hóa chuyển phát thường không có thời gian cụ thể,
+                            nếu có thì cũng mang tính chất dự đoán. Khi xảy ra
+                            sự cố, khách hàng không có quyền được khiếu nại.
+                            Việc giao hàng đôi khi là nhận tại bưu điện do đo
+                            tốn rất nhiều thời gian của khách hàng.
+                          </p>
+
+                          <p>
+                            Trên đây là sự khác biệt cơ bản giữa hai dịch vụ
+                            chuyển phát nhanh với chuyển phát thường. Căn cứ vào
+                            những điểm khác biệt đó, người kinh doanh có thể lựa
+                            chọn được dịch vụ cho phù hợp với tình hình kinh
+                            doanh của doanh nghiệp mình.
+                          </p>
+
+                          <p>
+                            Trong trường hợp, doanh nghiệp của bạn lựa chọn hình
+                            thức tự vận chuyển hàng hóa bằng cách sử dụng đội
+                            ngũ nhân viên giao hàng thì nên chú ý đến vấn đề đào
+                            tạo, quản lý nhân viên giao hàng để giữ được uy tín
+                            trong kinh doanh. Bởi lẽ những người giao hàng có
+                            tiếp xúc trực tiếp với khách hàng. Doanh nghiệp nên
+                            lựa chọn phần mềm quản lý shipper Movecrop cho khâu
+                            vận chuyển của mình.
+                          </p>
+
+                          <footer>&nbsp;</footer>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="w-100 clearfix">
+                      <div class="w-100 clear-fix">
+                        <form
+                          method="post"
+                          action="/posts/dich-vu-chuyen-phat-nhanh-va-chuyen-phat-thuong-co-diem-gi-khac-biet/comments"
+                          id="article_comments"
+                          accept-charset="UTF-8">
+                          <input
+                            name="FormType"
+                            type="hidden"
+                            value="article_comments" />
+                          <input name="utf8" type="hidden" value="true" />
+
+                          <div class="w-100 clear-fix clearfix">
+                            <div class="form-coment">
+                              <div class="margin-top-0 margin-bottom-20 w-100">
+                                <h5 class="title-form-coment">
+                                  Viết bình luận:
+                                </h5>
+                              </div>
+                              <div class="row">
+                                <div
+                                  class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                                  <fieldset class="form-group padding-0">
+                                    <input
+                                      placeholder="Họ tên"
+                                      type="text"
+                                      class="form-control form-control-lg"
+                                      value=""
+                                      id="full-name"
+                                      name="Author"
+                                      required="" />
+                                  </fieldset>
+                                </div>
+                                <div
+                                  class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                                  <fieldset class="form-group padding-0">
+                                    <input
+                                      placeholder="Email"
+                                      pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,63}$"
+                                      type="email"
+                                      class="form-control form-control-lg"
+                                      value=""
+                                      name="Email"
+                                      required="" />
+                                  </fieldset>
+                                </div>
+                                <fieldset
+                                  class="form-group padding-right-15 padding-left-15 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                  <textarea
+                                    placeholder="Nội dung"
+                                    class="form-control form-control-lg"
+                                    id="comment"
+                                    name="Body"
+                                    rows="6"
+                                    required=""></textarea>
+                                </fieldset>
+                                <div
+                                  class="margin-bottom-fix margin-bottom-50-article clearfix padding-right-15 padding-left-15">
+                                  <button
+                                    type="submit"
+                                    class="btn btn-primary button_45">
+                                    Gửi bình luận
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- End form mail -->
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+
+                    <div class="blog-related clearfix">
+                      <div class="title-related clearfix">
+                        <a href="news.html" title="Tin bài liên quan"
+                          >Tin bài liên quan</a
+                        >
+                      </div>
+
+                      <div class="list_blog clearfix">
+                        <svg
+                          width="12"
+                          height="12"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 448 512">
+                          <path
+                            d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34zm192-34l-136-136c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l96.4 96.4-96.4 96.4c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l136-136c9.4-9.2 9.4-24.4 0-33.8z"></path>
+                        </svg>
+                        <a
+                          class="blog-title"
+                          href="tai-sao-noi-mien-phi-van-chuyen-la-yeu-to-canh-tranh-trong-thoi-dai-cong-nghe.html"
+                          title="Tại sao nói miễn phí vận chuyển là yếu tố cạnh tranh trong thời đại công nghệ?">
+                          Tại sao nói miễn phí vận chuyển là yếu tố cạnh tranh
+                          trong thời đại công nghệ?
+                        </a>
+                      </div>
+
+                      <div class="list_blog clearfix">
+                        <svg
+                          width="12"
+                          height="12"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 448 512">
+                          <path
+                            d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34zm192-34l-136-136c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l96.4 96.4-96.4 96.4c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l136-136c9.4-9.2 9.4-24.4 0-33.8z"></path>
+                        </svg>
+                        <a
+                          class="blog-title"
+                          href="danh-gia-va-lua-chon-nha-van-tai-mot-cach-hieu-qua.html"
+                          title="Đánh giá và lựa chọn nhà vận tải một cách hiệu quả">
+                          Đánh giá và lựa chọn nhà vận tải một cách hiệu quả
+                        </a>
+                      </div>
+
+                      <div class="list_blog clearfix">
+                        <svg
+                          width="12"
+                          height="12"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 448 512">
+                          <path
+                            d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34zm192-34l-136-136c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l96.4 96.4-96.4 96.4c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l136-136c9.4-9.2 9.4-24.4 0-33.8z"></path>
+                        </svg>
+                        <a
+                          class="blog-title"
+                          href="7-kinh-nghiem-can-phai-biet-khi-can-van-chuyen-hang-hoa.html"
+                          title="7 kinh nghiệm cần phải biết khi cần vận chuyển hàng hóa">
+                          7 kinh nghiệm cần phải biết khi cần vận chuyển hàng
+                          hóa
+                        </a>
+                      </div>
+
+                      <div class="list_blog clearfix">
+                        <svg
+                          width="12"
+                          height="12"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 448 512">
+                          <path
+                            d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34zm192-34l-136-136c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l96.4 96.4-96.4 96.4c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l136-136c9.4-9.2 9.4-24.4 0-33.8z"></path>
+                        </svg>
+                        <a
+                          class="blog-title"
+                          href="bung-no-dich-vu-chuyen-phat-nhanh-quoc-te.html"
+                          title="Bùng nổ dịch vụ chuyển phát nhanh quốc tế">
+                          Bùng nổ dịch vụ chuyển phát nhanh quốc tế
+                        </a>
+                      </div>
+                    </div>
+                  </article>
+                </section>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="copyright">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                <div class="wsp">
+                  <span>© Bản quyền thuộc về <b>Awesome Team</b></span>
+                  <span>|</span>
+                  <span>Cung cấp bởi</span>
+                  <a href="https://www.sapo.vn" rel="nofollow" target="_blank"
+                    >Sapo</a
+                  >
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                <ul class="follow_option">
+                  <li>
+                    <a href="#" title="Facebook"
+                      ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 320 512">
+                        <path
+                          d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path></svg
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="#" title="Twitter"
+                      ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512">
+                        <path
+                          d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="#" title="Google"
+                      ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 488 512">
+                        <path
+                          d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"></path></svg
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="#" title="Instagram"
+                      ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 448 512">
+                        <path
+                          d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <a href="#" id="back-to-top" class="backtop" title="Lên đầu trang">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <path
+              d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z"></path>
+          </svg>
+        </a>
+      </footer>
+    </div>
+
+    <!-- jQuery (required before Bootstrap) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <!-- WOW JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <!-- Custom JS -->
+    <script src="./assets/js/main.js"></script>
+    <!-- Navigation JS -->
+    <script src="./assets/js/navigation.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Initialize WOW.js for animations
+        new WOW().init();
+
+        // Smooth scroll for links
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+          anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+
+            const targetId = this.getAttribute("href");
+            if (targetId === "#") return;
+
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+              window.scrollTo({
+                top: targetElement.offsetTop - 80,
+                behavior: "smooth",
+              });
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
