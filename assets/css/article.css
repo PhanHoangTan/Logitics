@@ -56,6 +56,73 @@ textarea.form-control,
   padding: 0;
 }
 
+/* Responsive image styles */
+.article-content img,
+.rte img,
+.article-main img {
+  max-width: 100%;
+  height: auto !important;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Fix for images with inline width/height attributes */
+.article-content img[width],
+.rte img[width],
+.article-main img[width] {
+  width: auto;
+  max-width: 100%;
+}
+
+/* Fix for centered images */
+p[style*="text-align: center"] img {
+  margin: 0 auto;
+}
+
+@media (max-width: 767px) {
+  .article-content img,
+  .rte img,
+  .article-main img {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .article-content p[style*="text-align: center"] {
+    text-align: center !important;
+  }
+
+  .article-content h1 {
+    font-size: 22px;
+    line-height: 1.4;
+  }
+
+  .article-content h2 {
+    font-size: 18px;
+    line-height: 1.4;
+  }
+
+  .article-content h3 {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+
+  .article-content p,
+  .article-content li {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .article-title {
+    font-size: 22px !important;
+    line-height: 1.4 !important;
+  }
+
+  /* Improve spacing on mobile */
+  .article-content p {
+    margin-bottom: 15px;
+  }
+}
+
 /* Related articles section */
 .blog-related {
   margin-top: 40px;
