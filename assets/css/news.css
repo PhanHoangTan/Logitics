@@ -9,6 +9,13 @@
   z-index: 99;
   flex-flow: column;
   position: relative;
+  transition: all 0.5s ease;
+}
+
+.breadcrumb_background:hover {
+  background-position: center center;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transform: scale(1.01);
 }
 
 .breadcrumb_background:before {
@@ -61,6 +68,29 @@ ul.breadcrumb li {
 ul.breadcrumb li a {
   color: #fff;
   text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  padding: 0 5px;
+}
+
+ul.breadcrumb li a:hover {
+  color: #00aeef;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+ul.breadcrumb li a:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -3px;
+  left: 0;
+  background-color: #00aeef;
+  transition: width 0.3s ease;
+}
+
+ul.breadcrumb li a:hover:after {
+  width: 100%;
 }
 
 .crumb-border {
