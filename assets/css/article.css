@@ -79,6 +79,73 @@ p[style*="text-align: center"] img {
   margin: 0 auto;
 }
 
+/* iPad Specific Styles */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .article-content h1 {
+    font-size: 26px;
+    line-height: 1.4;
+    margin-bottom: 18px;
+  }
+
+  .article-content h2 {
+    font-size: 22px;
+    line-height: 1.4;
+    margin-bottom: 15px;
+  }
+
+  .article-content h3 {
+    font-size: 18px;
+    line-height: 1.4;
+  }
+
+  .article-content p,
+  .article-content li {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 18px;
+  }
+
+  /* Comment form styling */
+  .form-coment {
+    padding: 15px 0;
+  }
+
+  .form-coment textarea.form-control {
+    min-height: 100px;
+  }
+
+  /* Related articles section */
+  .blog-related {
+    margin-top: 30px;
+    padding-top: 25px;
+  }
+
+  .title-related {
+    font-size: 17px;
+    margin-bottom: 15px;
+  }
+
+  .list_blog a.blog-title {
+    font-size: 14px;
+  }
+}
+
+/* iPad Pro Specific Styles */
+@media only screen and (min-width: 1024px) and (max-width: 1366px) {
+  .article-content h1 {
+    font-size: 28px;
+  }
+
+  .article-content h2 {
+    font-size: 24px;
+  }
+
+  .form-coment {
+    padding: 20px 0;
+  }
+}
+
+/* Mobile Styles */
 @media (max-width: 767px) {
   .article-content img,
   .rte img,
@@ -94,32 +161,173 @@ p[style*="text-align: center"] img {
   .article-content h1 {
     font-size: 22px;
     line-height: 1.4;
+    margin-bottom: 15px;
   }
 
   .article-content h2 {
     font-size: 18px;
     line-height: 1.4;
+    margin-bottom: 12px;
   }
 
   .article-content h3 {
     font-size: 16px;
     line-height: 1.4;
+    margin-bottom: 10px;
   }
 
   .article-content p,
   .article-content li {
     font-size: 15px;
     line-height: 1.6;
+    margin-bottom: 15px;
   }
 
   .article-title {
     font-size: 22px !important;
     line-height: 1.4 !important;
+    margin-bottom: 15px !important;
   }
 
-  /* Improve spacing on mobile */
-  .article-content p {
+  /* Comment form styling */
+  .w-100.clear-fix h5,
+  .title-form-coment {
+    font-size: 16px;
     margin-bottom: 15px;
+  }
+
+  .form-coment {
+    padding: 15px 0;
+    margin-bottom: 20px;
+  }
+
+  input.form-control,
+  textarea.form-control,
+  .form-coment input.form-control,
+  .form-coment textarea.form-control {
+    padding: 10px;
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+
+  .form-coment textarea.form-control {
+    min-height: 100px;
+  }
+
+  .btn-primary,
+  .button_45,
+  .form-coment button.btn-primary,
+  .form-coment button.button_45 {
+    padding: 8px 20px;
+    font-size: 13px;
+  }
+
+  /* Related articles section */
+  .blog-related {
+    margin-top: 30px;
+    padding-top: 20px;
+  }
+
+  .title-related {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+
+  .list_blog {
+    padding: 8px 0;
+  }
+
+  .list_blog a.blog-title {
+    font-size: 14px;
+  }
+
+  .tin-bai-lien-quan h3 {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+
+  .tin-bai-lien-quan .article-item {
+    padding: 8px 0;
+  }
+
+  .tin-bai-lien-quan .article-item a {
+    font-size: 14px;
+    padding-left: 15px;
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+  .article-content h1 {
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+
+  .article-content h2 {
+    font-size: 17px;
+    margin-bottom: 10px;
+  }
+
+  .article-content h3 {
+    font-size: 15px;
+    margin-bottom: 8px;
+  }
+
+  .article-content p,
+  .article-content li {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 12px;
+  }
+
+  .article-title {
+    font-size: 20px !important;
+  }
+
+  /* Improve comment form spacing on mobile */
+  .form-coment {
+    padding: 10px 0;
+  }
+
+  /* No padding bottom on small screens */
+  .article-content p:last-child {
+    margin-bottom: 0;
+  }
+
+  /* Make buttons more touch-friendly */
+  .btn-primary,
+  .button_45 {
+    width: 100%;
+    padding: 10px;
+  }
+}
+
+/* Very small mobile devices */
+@media (max-width: 374px) {
+  .article-content h1 {
+    font-size: 18px;
+  }
+
+  .article-content h2 {
+    font-size: 16px;
+  }
+
+  .article-content h3 {
+    font-size: 14px;
+  }
+
+  .article-content p,
+  .article-content li {
+    font-size: 13px;
+  }
+
+  .article-title {
+    font-size: 18px !important;
+  }
+
+  .tin-bai-lien-quan .article-item a,
+  .list_blog a.blog-title {
+    font-size: 13px;
   }
 }
 

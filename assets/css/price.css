@@ -152,25 +152,124 @@
   border: 1px solid #ddd;
 }
 
+/* iPad Responsive Styles */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .breadcrumb_background {
+    min-height: 350px;
+    margin-bottom: 25px;
+  }
+
+  .title_page {
+    font-size: 30px;
+  }
+
+  .title_full {
+    padding-top: 30px;
+  }
+
+  .title-head {
+    font-size: 22px;
+  }
+
+  .content-page h2 {
+    font-size: 18px;
+    margin: 20px 0 12px;
+  }
+
+  .page_quote {
+    padding-bottom: 40px;
+  }
+
+  .content-page table td {
+    padding: 10px;
+    font-size: 14px;
+  }
+}
+
+/* iPad Pro */
+@media only screen and (min-width: 1024px) and (max-width: 1366px) {
+  .breadcrumb_background {
+    min-height: 400px;
+  }
+
+  .title_page {
+    font-size: 32px;
+  }
+}
+
+/* Mobile Responsive Styles */
 @media (max-width: 767px) {
   .breadcrumb_background {
     min-height: 200px;
+    margin-bottom: 20px;
+  }
+
+  .title_page {
+    font-size: 22px;
+  }
+
+  .title_full {
+    padding-top: 20px;
+    padding-bottom: 10px;
+  }
+
+  .title-head {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .content-page h2 {
+    font-size: 18px;
+    margin: 20px 0 10px;
+  }
+
+  .content-page table td {
+    padding: 8px;
+    font-size: 13px;
+  }
+
+  .page_quote {
+    padding-bottom: 30px;
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+  .breadcrumb_background {
+    min-height: 180px;
   }
 
   .title_page {
     font-size: 20px;
   }
 
-  .title-head {
-    font-size: 20px;
+  .breadcrumb li {
+    font-size: 12px;
   }
 
-  .content-page h2 {
+  .title-head {
     font-size: 18px;
   }
 
+  .content-page h2 {
+    font-size: 16px;
+  }
+
+  .content-page p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  /* Table responsive handling for very small screens */
+  .content-page table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+
   .content-page table td {
-    padding: 8px;
-    font-size: 13px;
+    padding: 6px;
+    font-size: 12px;
   }
 }

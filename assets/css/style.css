@@ -334,7 +334,27 @@ body {
 }
 
 /* Responsive Styles */
+@media (max-width: 1199px) {
+  .container {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+
+  .nav-item {
+    margin-left: 20px;
+  }
+
+  .slider-content h2 {
+    font-size: 38px;
+  }
+}
+
 @media (max-width: 991.98px) {
+  .container {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
   .item_big {
     flex-direction: column;
     position: fixed;
@@ -352,7 +372,7 @@ body {
   }
 
   .item_big.active {
-    right: 0; /* Thay đổi từ left sang right */
+    right: 0;
   }
 
   .nav-item {
@@ -396,13 +416,32 @@ body {
   .slider-content p {
     font-size: 16px;
   }
+
+  .section_about,
+  .section_service,
+  .section_transport,
+  .section_choose,
+  .section_data,
+  .section_app,
+  .section_blog {
+    padding: 40px 0;
+  }
+
+  .title_module_main h2 {
+    font-size: 28px;
+  }
+
+  /* Services section responsive */
+  .service-content,
+  .bg-primary .service-content {
+    padding: 30px 20px;
+  }
 }
 
-/* Additional responsive breakpoints */
 @media (max-width: 767.98px) {
   .container {
-    padding-left: 25px;
-    padding-right: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   .logo-wrapper img {
@@ -414,27 +453,80 @@ body {
   }
 
   .slider-content h2 {
-    font-size: 28px;
+    font-size: 26px;
   }
 
   .slider-content p {
     font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .title_module_main h2 {
+    font-size: 24px;
+  }
+
+  /* Services section */
+  .service-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .service-icon img {
+    max-width: 30px;
+  }
+
+  .service-content,
+  .bg-primary .service-content {
+    padding: 15px;
+  }
+
+  /* Transport section */
+  .transport-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 15px;
+  }
+
+  /* Blog styling */
+  .post-detail {
+    width: 60px;
+    height: 60px;
+  }
+
+  .date-blog {
+    font-size: 16px;
+  }
+
+  .month-blog {
+    font-size: 12px;
+  }
+
+  /* Footer adjustments */
+  .footer {
+    text-align: center;
+  }
+
+  .follow_option {
+    justify-content: center;
+    margin-top: 10px;
   }
 }
 
 @media (max-width: 575.98px) {
   .container {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 
   .item_big {
-    width: 240px;
+    width: 260px;
+    right: -260px;
     padding-top: 50px;
   }
 
   .nav-item .a-img {
-    padding: 6px 0;
+    padding: 8px 0;
+    font-size: 15px;
   }
 
   .mid-header {
@@ -442,11 +534,185 @@ body {
   }
 
   .slider-content h2 {
-    font-size: 24px;
+    font-size: 22px;
+    margin-bottom: 10px;
   }
 
   .slider-content p {
     font-size: 12px;
+    margin-bottom: 15px;
+  }
+
+  /* About section */
+  .section_about {
+    padding: 30px 0;
+  }
+
+  .title_module_main {
+    margin-bottom: 25px;
+  }
+
+  .title_module_main h2 {
+    font-size: 20px;
+    padding-bottom: 10px;
+  }
+
+  .title_module_main h2:after {
+    width: 60px;
+    height: 2px;
+  }
+
+  .content-about {
+    padding: 15px 10px;
+  }
+
+  .title-about {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .about-sumary {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  /* Services section */
+  .service-item {
+    padding: 30px 0;
+  }
+
+  .title-service {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  .service-description {
+    font-size: 13px;
+  }
+
+  /* Blog section */
+  .blog_item {
+    margin-bottom: 15px;
+  }
+
+  .content_blog {
+    padding: 15px;
+  }
+
+  .content_blog h3 {
+    margin-bottom: 8px;
+  }
+
+  .content_blog h3 a {
+    font-size: 16px;
+    -webkit-line-clamp: 2;
+    max-height: 42px;
+  }
+
+  .summary_blog {
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
+
+  /* Footer */
+  .footer .wsp {
+    font-size: 10px;
+  }
+
+  .backtop {
+    right: 10px;
+    bottom: 10px;
+    width: 30px;
+    height: 30px;
+  }
+}
+
+/* Fix for very small devices */
+@media (max-width: 374px) {
+  .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .item_big {
+    width: 230px;
+    right: -230px;
+  }
+
+  .slider-content h2 {
+    font-size: 20px;
+  }
+
+  .slider-content p {
+    display: none;
+  }
+
+  .post-detail {
+    width: 50px;
+    height: 50px;
+  }
+
+  .date-blog {
+    font-size: 14px;
+  }
+
+  .month-blog {
+    font-size: 10px;
+  }
+}
+
+/* Fix for lazyload images */
+img.lazyload {
+  background-image: none !important;
+}
+
+/* Portrait iPad */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  .container {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  .slider-content h2 {
+    font-size: 32px;
+  }
+
+  .slider-content p {
+    font-size: 16px;
+  }
+
+  .nav-item {
+    margin-left: 15px;
+  }
+
+  .service-content,
+  .bg-primary .service-content {
+    padding: 20px;
+  }
+
+  .service-description,
+  .transport-description {
+    font-size: 14px;
+  }
+}
+
+/* Landscape iPad */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  .slider-content h2 {
+    font-size: 36px;
+  }
+
+  .service-content,
+  .bg-primary .service-content {
+    padding: 25px;
+  }
+}
+
+/* Define iPad Pro media query */
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) {
+  .container {
+    padding-left: 30px;
+    padding-right: 30px;
   }
 }
 

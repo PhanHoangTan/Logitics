@@ -367,13 +367,156 @@ ul.breadcrumb li a:hover:after {
   }
 }
 
+/* iPad Specific Styles */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .breadcrumb_background {
+    min-height: 350px;
+    padding: 180px 0px 0;
+  }
+
+  .title_page {
+    font-size: 28px;
+  }
+
+  .blogpage {
+    padding: 30px 0;
+  }
+
+  .blog_item {
+    margin-bottom: 25px;
+  }
+
+  .content_blog {
+    padding: 18px;
+  }
+
+  .content_blog h3 a {
+    font-size: 17px;
+  }
+
+  /* Add a 2-column layout for tablets */
+  .row.news-masonry {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .row.news-masonry [class*="col-"] {
+    width: 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+/* iPad Pro Specific Styles */
+@media only screen and (min-width: 1024px) and (max-width: 1366px) {
+  .breadcrumb_background {
+    min-height: 400px;
+    padding: 200px 0px 0;
+  }
+
+  .title_page {
+    font-size: 32px;
+  }
+
+  .row.news-masonry [class*="col-"] {
+    /* Keep normal grid layout for iPad Pro */
+  }
+}
+
+/* Mobile */
 @media (max-width: 767px) {
+  .breadcrumb_background {
+    min-height: 250px;
+    padding: 140px 0px 0;
+  }
+
+  .breadcrumb_background:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
   .title_page {
     font-size: 24px;
+    margin-bottom: 15px;
+  }
+
+  .blogpage {
+    padding: 25px 0;
   }
 
   .blog_item {
     margin-bottom: 20px;
+  }
+
+  .post-detail {
+    width: 60px;
+    height: 60px;
+  }
+
+  .date-blog {
+    font-size: 16px;
+  }
+
+  .month-blog {
+    font-size: 13px;
+  }
+
+  .content_blog {
+    padding: 15px;
+  }
+
+  .content_blog h3 a {
+    font-size: 16px;
+    -webkit-line-clamp: 2;
+    max-height: 42px;
+  }
+
+  .summary_blog {
+    font-size: 13px;
+    -webkit-line-clamp: 2;
+    max-height: 42px;
+    margin-bottom: 10px;
+  }
+
+  .pageinate-page-blog {
+    margin-top: 20px;
+  }
+
+  .pagination .page-item a {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+
+  .logo-section {
+    padding: 10px 0;
+  }
+
+  .logo-section img {
+    max-height: 40px;
+  }
+
+  .logo-title {
+    font-size: 18px;
+  }
+
+  .logo-subtitle {
+    font-size: 10px;
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+  .breadcrumb_background {
+    min-height: 200px;
+    padding: 110px 0px 0;
+  }
+
+  .title_page {
+    font-size: 20px;
+  }
+
+  ul.breadcrumb li {
+    font-size: 12px;
   }
 
   .post-detail {
@@ -386,18 +529,75 @@ ul.breadcrumb li a:hover:after {
   }
 
   .month-blog {
-    font-size: 12px;
-  }
-
-  .content_blog {
-    padding: 15px;
+    font-size: 11px;
   }
 
   .content_blog h3 a {
-    font-size: 16px;
+    font-size: 15px;
+  }
+
+  .blog_item:hover {
+    transform: translateY(-3px);
+  }
+
+  /* Optimize pagination for very small screens */
+  .pagination {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .pagination .page-item {
+    margin: 2px;
+  }
+
+  .pagination .page-item a {
+    padding: 4px 10px;
+    font-size: 13px;
+  }
+}
+
+/* Very small mobile devices */
+@media (max-width: 374px) {
+  .breadcrumb_background {
+    min-height: 180px;
+    padding: 90px 0px 0;
+  }
+
+  .post-detail {
+    width: 40px;
+    height: 40px;
+  }
+
+  .date-blog {
+    font-size: 12px;
+  }
+
+  .month-blog {
+    font-size: 10px;
+  }
+
+  .content_blog {
+    padding: 12px;
+  }
+
+  .content_blog h3 {
+    margin-bottom: 8px;
+  }
+
+  .content_blog h3 a {
+    font-size: 14px;
+    -webkit-line-clamp: 2;
+    max-height: 38px;
   }
 
   .summary_blog {
-    font-size: 13px;
+    font-size: 12px;
+    -webkit-line-clamp: 2;
+    margin-bottom: 8px;
+  }
+
+  .readmore {
+    font-size: 12px;
   }
 }
